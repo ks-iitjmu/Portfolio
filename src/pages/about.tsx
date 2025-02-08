@@ -20,24 +20,24 @@ const About = () => {
           <h1 className="atitle">Skills</h1>
           <div className="con">
             <div className="skill_row1">
-              <img src="src/assets/html.png" alt="HTML" className="icon1" />
-              <img src="src/assets/text.png" alt="CSS" className="icon1" />
-              <img src="src/assets/js.png" alt="Javascript" className="icon1" />
+              <img src="/html.png" alt="HTML" className="icon1" />
+              <img src="/text.png" alt="CSS" className="icon1" />
+              <img src="/js.png" alt="Javascript" className="icon1" />
             </div>
             <div className="skill_row1">
-            <img src="src/assets/typescript.png" alt="Typescript" className="icon1" />
-            <img src="src/assets/physics.png" alt="React" className="icon1" />
-            <img src="src/assets/programing.png" alt="Node.js" className="icon1" />
+            <img src="/typescript.png" alt="Typescript" className="icon1" />
+            <img src="/assets/physics.png" alt="React" className="icon1" />
+            <img src="/programing.png" alt="Node.js" className="icon1" />
             </div>
             <div className="skill_row1">
-            <img src="src/assets/c-.png" alt="C++" className="icon1" />
-              <img src="src/assets/social.png" alt="Git" className="icon1" />
-              <img src="src/assets/github-sign.png" alt="Github" className="icon1 github1" />
+            <img src="/c-.png" alt="C++" className="icon1" />
+              <img src="/social.png" alt="Git" className="icon1" />
+              <img src="/github-sign.png" alt="Github" className="icon1 github1" />
             </div>
             <div className="skill_row1">
-              <img src="src/assets/python.png" alt="Python" className="icon1" />
-              <img src="src/assets/NumPy-Logo.png" alt="Numpy" className="icon1" />
-              <img src="src/assets/pandas1.png" alt="Pandas" className="icon1" />
+              <img src="/python.png" alt="Python" className="icon1" />
+              <img src="/NumPy-Logo.png" alt="Numpy" className="icon1" />
+              <img src="/pandas1.png" alt="Pandas" className="icon1" />
             </div>
             
           </div>
