@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+.home-container {
+    padding-top: 4rem;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.span1 {
+    font-size: 4rem;
+}
+
+.line1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.line2 {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.span2 {
+    color: #4f46e5;
+}
+
+.span3 {
+    color: #4f46e5;
+    font-family: "Tangerine", serif;
+}
+
+.line3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.line4 {
+    margin-top: 2rem;
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: "Tangerine", serif;
+}
+
+@media (max-width: 548px) {
+    .line1 {
+        font-size: 1.4rem;
+    }
+    .line2 {
+        font-size: 3rem;
+    }
+    .line3 {
+        font-size: 1.4rem;
+    }
+    .line4 {
+        font-size: 4rem;
+    }
+}

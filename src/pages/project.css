@@ -1,0 +1,243 @@
+.portfolio {
+    margin: auto;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    max-width: 800px;
+    text-align: center;
+}
+
+.pro {
+    background-color: #e5e5f7;
+    background-image: linear-gradient(135deg, #d7c9ed 25%, transparent 25%), linear-gradient(225deg, #d7c9ed 25%, transparent 25%), linear-gradient(45deg, #d7c9ed 25%, transparent 25%), linear-gradient(315deg, #d7c9ed 25%, #e5e5f7 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+}
+
+.certifications {
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    max-width: 800px;
+    text-align: center;
+}
+
+.certifications h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #252170;
+}
+
+.certifications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.certification-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.certification-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.certification-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.certification-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.certification-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #252170;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.certification-link:hover {
+    background-color: #1e53ce;
+}
+
+@media (max-width: 600px) {
+    .certifications-grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .certification-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .certification-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .certification-card p {
+        font-size: 0.875rem;
+    }
+
+    .certification-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+.portfolio h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #252170;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+@media (max-width: 900px) and (min-width: 601px) {
+    .certifications-grid {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .certification-card {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-width: 45%;
+    }
+
+    .certification-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .certification-card p {
+        font-size: 0.875rem;
+    }
+
+    .certification-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .projects-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-width: 45%;
+    }
+
+    .project-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .project-card p {
+        font-size: 0.875rem;
+    }
+
+    .project-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #252170;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #1e53ce;
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .project-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .project-card p {
+        font-size: 0.875rem;
+    }
+
+    .project-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+}

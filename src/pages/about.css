@@ -1,0 +1,121 @@
+.about {
+    background-color: #f4f4f42a;
+    background-image: radial-gradient(circle at center center, #5b21b61a, #e5e5f7), repeating-radial-gradient(circle at center center, #5b21b61a, #5b21b61a, 10px, transparent 80px, transparent 10px);
+    background-blend-mode: overlay;
+}
+
+.passage {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes beat {
+    0%{
+        transform: scale(0.98);
+    }
+    50%{
+        transform: scale(1.084);
+    }
+    100%{
+        transform: scale(0.98);
+    }
+}
+
+.atitle {
+    position: relative;
+    z-index: 2;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #252170;
+    padding-bottom: 1rem;
+}
+
+.atext {
+    color: black;
+    font-weight: 500;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.skill_row1 {
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con {
+    padding: 1rem;
+}
+
+.icon1 {
+    width: 100px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.github1 {
+    background-color: aliceblue;
+    border-radius: 24px;
+    border: solid aliceblue;
+}
+
+.icon1:hover{
+    animation: beat .7s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .atitle {
+        font-size: 2rem;
+    }
+
+    .atext {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    .icon1 {
+        width: 80px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .skill_row1 {
+        height: 10rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .atitle {
+        font-size: 1.5rem;
+    }
+
+    .atext {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .icon1 {
+        width: 60px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .skill_row1 {
+        height: 8rem;
+    }
+}
