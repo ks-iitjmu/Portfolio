@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ## 🔗 Live Demo
 
-[Visit My Portfolio](#) *(Replace with your actual link)*
+[Visit My Portfolio](https://kunalsharma.tech)
 
 ## 📌 Features
 
@@ -17,14 +17,12 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, React.js
-- **Styling:** Tailwind CSS / Bootstrap / SCSS
-- **Backend (if applicable):** Node.js, Express.js
-- **Database (if applicable):** MongoDB / Firebase
-- **Hosting:** Vercel, Netlify, GitHub Pages
+- **Styling:** CSS
+- **Hosting:** Vercel
 
 ## 📸 Screenshots
 
-*(Add some images of your portfolio website here)*
+
 
 ## 🔧 Installation & Setup
 
@@ -44,14 +42,6 @@ npm install
 npm start
 ```
 
-## 🚀 Deployment
-
-You can deploy this website on platforms like:
-
-- **Vercel** (`vercel deploy`)
-- **Netlify** (drag & drop or `netlify deploy`)
-- **GitHub Pages** (`npm run deploy`)
-
 ## 💡 Future Enhancements
 
 - Add a blog section 📝
@@ -62,11 +52,9 @@ You can deploy this website on platforms like:
 
 Feel free to reach out via:
 
-- **Email:** [your-email@example.com](mailto\:your-email@example.com)
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/your-profile)
-- **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
+- **Email:** [iamkunal.iitjmu@gmail.com](mailto\:iamkunal.iitjmu@gmail.com)
+- **LinkedIn:** [ks-iitjmu](https://linkedin.com/in/ks-iitjmu)
 
 ---
 
 ⭐️ Don't forget to star this repository if you like it!
-
