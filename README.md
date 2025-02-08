@@ -30,10 +30,10 @@ To run this project locally, follow these steps:
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-username/your-portfolio.git
+https://github.com/ks-iitjmu/My-Website.git
 
 # Navigate to the project directory
-cd your-portfolio
+cd My-Website
 
 # Install dependencies
 npm install
