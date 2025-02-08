@@ -40,13 +40,13 @@ const Footer = () => {
 
                     <div className="footer-bottom">
                         <div className="footer-social">
-                            <a href="#" className="social-link">
+                            <a href="https://x.com/KUNALSHARM59786" className="social-link">
                                 <Twitter size={20} />
                             </a>
-                            <a href="#" className="social-link">
+                            <a href="https://www.linkedin.com/in/ks-iitjmu" className="social-link">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" className="social-link">
+                            <a href="https://github.com/ks-iitjmu" className="social-link">
                                 <Github size={20} />
                             </a>
                         </div>
