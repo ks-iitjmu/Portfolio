@@ -26,7 +26,7 @@ const About = () => {
             </div>
             <div className="skill_row1">
             <img src="/typescript.png" alt="Typescript" className="icon1" />
-            <img src="/assets/physics.png" alt="React" className="icon1" />
+            <img src="/physics.png" alt="React" className="icon1" />
             <img src="/programing.png" alt="Node.js" className="icon1" />
             </div>
             <div className="skill_row1">
