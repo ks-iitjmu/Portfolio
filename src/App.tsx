@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/header';
 import Home from './pages/home';
 import About from './pages/about';
@@ -18,6 +18,7 @@ const App = () => {
         <Route path='/project' element={<Project />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         {/* Add other routes here */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </Router>
