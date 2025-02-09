@@ -38,6 +38,16 @@ const projects: Project[] = [
 const Project: React.FC = () => {
   return (
     <div className="pro">
+      <div className="background-shapes">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+      </div>
       <div className="portfolio">
         <h1>My Projects</h1>
         <div className="projects-container">
@@ -61,55 +71,55 @@ const Project: React.FC = () => {
         <h1>My Certifications</h1>
         <div className="certifications-grid">
           {[
-        {
-          id: 1,
-          name: 'Python Certification',
-          provider: 'HackerRank',
-          image: '/cert/python.png',
-          link: 'https://www.hackerrank.com/certificates/61a81b1915be',
-        },
-        {
-          id: 2,
-          name: 'Problem Solving',
-          provider: 'HackerRank',
-          image: '/cert/problem.png',
-          link: 'https://www.hackerrank.com/certificates/7ac1b7a7820c',
-        },
-        {
-          id: 3,
-          name: 'Numpy Certification',
-          provider: 'DataCamp',
-          image: '/cert/numpy.png',
-          link: 'https://drive.google.com/file/d/19kBZyh-PoApPZem98hYVUr2h9RVqgfuG/view?usp=sharing',
-        },
-        {
-          id: 4,
-          name: 'Pandas Certification',
-          provider: 'DataCamp',
-          image: '/cert/pandas.png',
-          link: 'https://drive.google.com/file/d/1Tt5mScjs6xqNAPQRBVFnOAk7VGw5l3pX/view?usp=drive_link',
-        },
-        {
-          id: 5,
-          name: 'Matplotlib Certification',
-          provider: 'DataCamp',
-          image: '/cert/matplotlib.png',
-          link: 'https://drive.google.com/file/d/1zYY3DJnbTg2wtmmfTPEY1dBySFTYIj2v/view?usp=sharing',
-        }
+            {
+              id: 1,
+              name: 'Python Certification',
+              provider: 'HackerRank',
+              image: '/cert/python.png',
+              link: 'https://www.hackerrank.com/certificates/61a81b1915be',
+            },
+            {
+              id: 2,
+              name: 'Problem Solving',
+              provider: 'HackerRank',
+              image: '/cert/problem.png',
+              link: 'https://www.hackerrank.com/certificates/7ac1b7a7820c',
+            },
+            {
+              id: 3,
+              name: 'Numpy Certification',
+              provider: 'DataCamp',
+              image: '/cert/numpy.png',
+              link: 'https://drive.google.com/file/d/19kBZyh-PoApPZem98hYVUr2h9RVqgfuG/view?usp=sharing',
+            },
+            {
+              id: 4,
+              name: 'Pandas Certification',
+              provider: 'DataCamp',
+              image: '/cert/pandas.png',
+              link: 'https://drive.google.com/file/d/1Tt5mScjs6xqNAPQRBVFnOAk7VGw5l3pX/view?usp=drive_link',
+            },
+            {
+              id: 5,
+              name: 'Matplotlib Certification',
+              provider: 'DataCamp',
+              image: '/cert/matplotlib.png',
+              link: 'https://drive.google.com/file/d/1zYY3DJnbTg2wtmmfTPEY1dBySFTYIj2v/view?usp=sharing',
+            }
           ].map((cert) => (
-        <div key={cert.id} className="certification-card">
-          <img src={cert.image} alt={cert.name} className="certification-image" />
-          <h2>{cert.name}</h2>
-          <p>{cert.provider}</p>
-          <a
-            href={cert.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="certification-link"
-          >
-            View Certificate
-          </a>
-        </div>
+            <div key={cert.id} className="certification-card">
+              <img src={cert.image} alt={cert.name} className="certification-image" />
+              <h2>{cert.name}</h2>
+              <p>{cert.provider}</p>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certification-link"
+              >
+                View Certificate
+              </a>
+            </div>
           ))}
         </div>
       </div>

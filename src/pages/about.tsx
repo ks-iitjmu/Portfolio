@@ -3,6 +3,16 @@ import './about.css';
 const About = () => {
   return (
     <>
+      <div className="background-shapes">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+      </div>
       <div className="about">
         <section className='passage'>
           <h1 className="atitle">About Me!</h1>
@@ -25,12 +35,12 @@ const About = () => {
               <img src="/js.png" alt="Javascript" className="icon1" />
             </div>
             <div className="skill_row1">
-            <img src="/typescript.png" alt="Typescript" className="icon1" />
-            <img src="/physics.png" alt="React" className="icon1" />
-            <img src="/programing.png" alt="Node.js" className="icon1" />
+              <img src="/typescript.png" alt="Typescript" className="icon1" />
+              <img src="/physics.png" alt="React" className="icon1" />
+              <img src="/programing.png" alt="Node.js" className="icon1" />
             </div>
             <div className="skill_row1">
-            <img src="/c-.png" alt="C++" className="icon1" />
+              <img src="/c-.png" alt="C++" className="icon1" />
               <img src="/social.png" alt="Git" className="icon1" />
               <img src="/github-sign.png" alt="Github" className="icon1 github1" />
             </div>
@@ -39,7 +49,7 @@ const About = () => {
               <img src="/NumPy-Logo.png" alt="Numpy" className="icon1" />
               <img src="/pandas1.png" alt="Pandas" className="icon1" />
             </div>
-            
+
           </div>
         </section>
       </div>
