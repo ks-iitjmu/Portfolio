@@ -9,6 +9,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header className="header">
       <div className="header-container">
@@ -17,10 +21,10 @@ const Header = () => {
             <span className="logo">Kunal Sharma</span>
           </div>
           <nav className={`desktop-nav ${isMenuOpen ? 'mobile-nav-open' : ''}`}>
-            <Link to="/home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link to="/project" className="nav-link" onClick={() => setIsMenuOpen(false)}>Projects</Link>
-            <Link to="/contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contacts</Link>
+            <Link to="/home" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>Home</Link>
+            <Link to="/about" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>About</Link>
+            <Link to="/project" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>Projects</Link>
+            <Link to="/contact" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>Contacts</Link>
           </nav>
           <button className="menu-button" onClick={toggleMenu}>
             {isMenuOpen ? '✕' : '☰'}
