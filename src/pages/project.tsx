@@ -23,9 +23,9 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Project 3: Weather Dashboard',
-    description: 'A weather dashboard that displays real-time weather data using APIs.',
-    link: 'https://example.com/project3',
+    title: 'Project 3: Weather App',
+    description: 'A weather App that displays real-time weather data using APIs.',
+    link: 'https://ks-iitjmu.github.io/weatherapp/',
   },
   {
     id: 4,
