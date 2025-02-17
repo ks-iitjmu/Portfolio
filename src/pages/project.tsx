@@ -33,6 +33,12 @@ const projects: Project[] = [
     description: 'An intelligent chatbot that can assist users with various queries and provide information in real-time.',
     link: 'https://example.com/project4',
   },
+  {
+    id: 5,
+    title: 'Project 3: DevCard',
+    description: 'Track your coding journey with real-time commit stats and LeetCode solutions. Showcase your progress and compare achievements with fellow developers!',
+    link: 'https://dev-card-two.vercel.app/',
+  },
 ];
 
 const Project: React.FC = () => {
