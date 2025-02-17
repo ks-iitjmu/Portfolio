@@ -22,6 +22,14 @@
 }
 
 /* Hide specific shapes on mobile */
+
+/* Project images */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
 @media (max-width: 768px) {
 
     .shape:nth-child(4),

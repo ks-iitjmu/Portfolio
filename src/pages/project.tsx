@@ -6,6 +6,7 @@ interface Project {
   title: string;
   description: string;
   link: string;
+  image: string;
 }
 
 const projects: Project[] = [
@@ -14,30 +15,35 @@ const projects: Project[] = [
     title: 'Project 1: E-Commerce Website',
     description: 'A fully functional e-commerce website built with React and Node.js.',
     link: 'https://example.com/project1',
+    image: '/images/project1.png',
   },
   {
     id: 2,
     title: 'Project 2: Task Manager App',
     description: 'A task management application with drag-and-drop functionality.',
     link: 'https://example.com/project2',
+    image: '/images/project2.png',
   },
   {
     id: 3,
     title: 'Project 3: Weather App',
     description: 'A weather App that displays real-time weather data using APIs.',
     link: 'https://ks-iitjmu.github.io/weatherapp/',
+    image: '/images/project3.png',
   },
   {
     id: 4,
     title: 'Project 4: Chatbot',
     description: 'An intelligent chatbot that can assist users with various queries and provide information in real-time.',
     link: 'https://example.com/project4',
+    image: '/images/project4.png',
   },
   {
     id: 5,
     title: 'Project 5: DevCard',
     description: 'Track your coding journey with real-time commit stats and LeetCode solutions. Showcase your progress and compare achievements with fellow developers!',
     link: 'https://dev-card-two.vercel.app/',
+    image: '/proj/devcard.png',
   },
 ];
 
@@ -60,6 +66,7 @@ const Project: React.FC = () => {
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <h2>{project.title}</h2>
+              <img src={project.image} alt={project.title} className="project-image" />
               <p>{project.description}</p>
               <a
                 href={project.link}
