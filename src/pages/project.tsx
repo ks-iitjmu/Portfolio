@@ -26,10 +26,10 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Project 3: Weather App',
+    title: 'Project 3: Klimate',
     description: 'A weather App that displays real-time weather data using APIs.',
-    link: 'https://ks-iitjmu.github.io/weatherapp/',
-    image: '/images/project3.png',
+    link: 'https://klimate-sand.vercel.app/',
+    image: '/proj/Klimate.png',
   },
   {
     id: 4,
