@@ -85,39 +85,39 @@ const Project: React.FC = () => {
             },
             {
               id: 2,
-              name: 'Python Certification',
-              provider: 'HackerRank',
-              image: '/cert/python.png',
-              link: 'https://www.hackerrank.com/certificates/61a81b1915be',
-            },
-            {
-              id: 3,
-              name: 'Problem Solving',
-              provider: 'HackerRank',
-              image: '/cert/problem.png',
-              link: 'https://www.hackerrank.com/certificates/7ac1b7a7820c',
-            },
-            {
-              id: 4,
               name: 'Numpy Certification',
               provider: 'DataCamp',
               image: '/cert/numpy.png',
               link: 'https://drive.google.com/file/d/19kBZyh-PoApPZem98hYVUr2h9RVqgfuG/view?usp=sharing',
             },
             {
-              id: 5,
+              id: 3,
               name: 'Pandas Certification',
               provider: 'DataCamp',
               image: '/cert/pandas.png',
               link: 'https://drive.google.com/file/d/1Tt5mScjs6xqNAPQRBVFnOAk7VGw5l3pX/view?usp=drive_link',
             },
             {
-              id: 6,
+              id: 4,
               name: 'Matplotlib Certification',
               provider: 'DataCamp',
               image: '/cert/matplotlib.png',
               link: 'https://drive.google.com/file/d/1zYY3DJnbTg2wtmmfTPEY1dBySFTYIj2v/view?usp=sharing',
-            }
+            },
+            {
+              id: 5,
+              name: 'Python Certification',
+              provider: 'HackerRank',
+              image: '/cert/python.png',
+              link: 'https://www.hackerrank.com/certificates/61a81b1915be',
+            },
+            {
+              id: 6,
+              name: 'Problem Solving',
+              provider: 'HackerRank',
+              image: '/cert/problem.png',
+              link: 'https://www.hackerrank.com/certificates/7ac1b7a7820c',
+            },
           ].map((cert) => (
             <div key={cert.id} className="certification-card">
               <img src={cert.image} alt={cert.name} className="certification-image" />
