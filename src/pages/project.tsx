@@ -76,37 +76,43 @@ const Project: React.FC = () => {
       <div className="certifications">
         <h1>My Certifications</h1>
         <div className="certifications-grid">
-          {[
-            {
+          {[{
               id: 1,
+              name: 'Python Data Associate',
+              provider: 'Data Camp',
+              image: '/cert/data.png',
+              link: 'https://www.datacamp.com/certificate/PDA0019676905449',
+            },
+            {
+              id: 2,
               name: 'Python Certification',
               provider: 'HackerRank',
               image: '/cert/python.png',
               link: 'https://www.hackerrank.com/certificates/61a81b1915be',
             },
             {
-              id: 2,
+              id: 3,
               name: 'Problem Solving',
               provider: 'HackerRank',
               image: '/cert/problem.png',
               link: 'https://www.hackerrank.com/certificates/7ac1b7a7820c',
             },
             {
-              id: 3,
+              id: 4,
               name: 'Numpy Certification',
               provider: 'DataCamp',
               image: '/cert/numpy.png',
               link: 'https://drive.google.com/file/d/19kBZyh-PoApPZem98hYVUr2h9RVqgfuG/view?usp=sharing',
             },
             {
-              id: 4,
+              id: 5,
               name: 'Pandas Certification',
               provider: 'DataCamp',
               image: '/cert/pandas.png',
               link: 'https://drive.google.com/file/d/1Tt5mScjs6xqNAPQRBVFnOAk7VGw5l3pX/view?usp=drive_link',
             },
             {
-              id: 5,
+              id: 6,
               name: 'Matplotlib Certification',
               provider: 'DataCamp',
               image: '/cert/matplotlib.png',
