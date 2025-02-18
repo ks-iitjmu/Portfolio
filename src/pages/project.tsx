@@ -80,6 +80,19 @@ const Project: React.FC = () => {
           ))}
         </div>
       </div>
+      <div className="learn-more">
+        <div className="learn-more-card">
+          <h2>My Learning Projects</h2>
+          <p>Explore my journey of learning through various projects and tutorials.</p>
+          <a
+        href="./src/learningprojects/index.html"
+        rel="noopener noreferrer"
+        className="learn-more-link"
+          >
+        Learn More
+          </a>
+        </div>
+      </div>
       <div className="certifications">
         <h1>My Certifications</h1>
         <div className="certifications-grid">
