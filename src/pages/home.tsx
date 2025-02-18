@@ -15,10 +15,20 @@ const Home: React.FC = () => {
                 <div className="shape"></div>
             </div>
             <div className='home-container'>
-                <h1 className="line1"><span className='span1'>Hey</span> It's Me</h1>
-                <h1 className="line2">Kunal <span className="span2">Sharma</span></h1>
-                <h1 className="line3">I am a passionate</h1>
-                <h1 className="line4 span3">Web <span className='span3'>Developer</span></h1>
+                <div className="text">
+                    <h1 className="hero-title">
+                        Hi, I'm <span className="s">Kunal Sharma</span>
+                        <br />
+                        Full Stack Developer
+                    </h1>
+                    <p className="hero-subtitle">
+                        I build exceptional digital experiences that make a difference.
+                        Passionate about creating innovative solutions through code.
+                    </p>
+                </div>
+                <div className="image">
+                    <img src="./src/assets/me2.jpg" alt="myimage" className='img2'/>
+                </div>
             </div>
         </>
     );

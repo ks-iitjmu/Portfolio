@@ -102,7 +102,7 @@ const Project: React.FC = () => {
               name: 'Pandas Certification',
               provider: 'DataCamp',
               image: '/cert/pandas.png',
-              link: 'https://drive.google.com/file/d/1Tt5mScjs6xqNAPQRBVFnOAk7VGw5l3pX/view?usp=drive_link',
+              link: ' ',
             },
             {
               id: 4,

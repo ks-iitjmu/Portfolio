@@ -30,10 +30,10 @@ const Footer = () => {
                         <div className="footer-section">
                             <h3 className="footer-title">Certifications</h3>
                             <ul className="footer-list">
-                                <li><a href="#">certificate1</a></li>
-                                <li><a href="#">certificate2</a></li>
-                                <li><a href="#">certificate3</a></li>
-                                <li><a href="#">certificate4</a></li>
+                                <li><a href="https://drive.google.com/file/d/1TiizMD-67iJVow7jYRpKy6z4dzK84uO_/view?usp=drive_link" target='_blank'>Data Associate</a></li>
+                                <li><a href="https://drive.google.com/file/d/19kBZyh-PoApPZem98hYVUr2h9RVqgfuG/view?usp=sharing" target='_blank'>Numpy</a></li>
+                                <li><a href="https://drive.google.com/file/d/1Tt5mScjs6xqNAPQRBVFnOAk7VGw5l3pX/view?usp=drive_link" target='_blank'>Pandas</a></li>
+                                <li><a href="https://drive.google.com/file/d/1zYY3DJnbTg2wtmmfTPEY1dBySFTYIj2v/view?usp=sharing" target='_blank'>Matplotlib</a></li>
                             </ul>
                         </div>
                     </div>
