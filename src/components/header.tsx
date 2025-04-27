@@ -39,8 +39,7 @@ const Header = () => {
           <div>
             <span className="logo">Kunal Sharma</span>
           </div>
-          <nav ref={menuRef} className={`desktop-nav ${isMenuOpen ? 'mobile-nav-open' : ''}`}>
-            <Link to="/home" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>Home</Link>
+          <nav ref={menuRef} className={`desktop-nav ${isMenuOpen ? 'mobile-nav-open' : ''}`}>   
             <Link to="/about" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>About</Link>
             <Link to="/project" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>Projects</Link>
             <Link to="/contact" className="nav-link" onClick={() => { setIsMenuOpen(false); handleLinkClick(); }}>Contacts</Link>
