@@ -1,0 +1,797 @@
+---
+// Kunal Sharma IIT JAMMU
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Socialpill from "../components/Socialpill.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Github from "../components/icons/Github.astro";
+import Leetcode from "../components/icons/Leetcode.astro";
+import Codeforces from "../components/icons/Codeforces.astro";
+import Suitcase from "../components/icons/Suitcase.astro";
+import Projectsicon from "../components/icons/Projectsicon.astro";
+import Nextjs from "../components/icons/Nextjs.astro";
+import Tailwindcss from "../components/icons/Tailwindcss.astro";
+import Linkicon from "../components/icons/Linkicon.astro";
+import Mail from "../components/icons/Mail.astro";
+import Whatsapp from "../components/icons/Whatsapp.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Facebook from "../components/icons/Facebook.astro";
+import React from "../components/icons/React.astro";
+import Rasa from "../components/icons/Rasa.astro";
+import Contactus from "../components/icons/Contactus.astro";
+import "../styles/global.css";
+import Download from "../components/icons/Download.astro";
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
+---
+
+<Layout title="Kunal Sharma" description="Visit my Portfolio Website">
+  <main>
+    <!-- hero section -->
+    <section
+      id="Home"
+      class="section py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-xl mx-auto">
+        <div class="flex items-center gap-4 mb-6">
+          <img
+            src="/kunal.jpg"
+            alt="Kunal Sharma"
+            class="rounded-full shadow-lg w-16 h-16"
+          />
+          <a
+            href="https://linkedin.com/in/ks-iitjmu"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center transition hover:scale-105"
+          >
+            <span
+              class="relative inline-flex overflow-hidden rounded-full p-[1px]"
+            >
+              <span
+                class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"
+              ></span>
+              <div
+                class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+              >
+                Available for Work
+              </div>
+            </span>
+          </a>
+        </div>
+
+        <h1
+          class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+        >
+          Hey, I'm Kunal Sharma
+        </h1>
+
+        <p
+          class="mt-6 text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-none"
+        >
+          I'm a B.Tech student in Mathematics and Computing at IIT Jammu, with a
+          strong interest in web development and machine learning. My academic
+          foundation equips me to bridge the gap between mathematical theory and
+          practical applications. I enjoy building responsive and dynamic web
+          applications using modern frameworks like React and Next.js, and I'm
+          equally enthusiastic about exploring intelligent systems through
+          machine learning and data-driven projects. I'm always eager to learn
+          new technologies and apply them to solve real-world problems.
+        </p>
+
+        <nav class="flex flex-wrap justify-start gap-4 mt-10">
+          <Socialpill href="https://www.linkedin.com/in/ks-iitjmu/">
+            <Linkedin />
+            Linkedin
+          </Socialpill>
+          <Socialpill href="https://github.com/ks-iitjmu">
+            <Github />
+            Github
+          </Socialpill>
+          <Socialpill href="https://leetcode.com/u/kunalsharma02/">
+            <Leetcode />
+            Leetcode
+          </Socialpill>
+          <Socialpill href="https://codeforces.com/profile/ks-iitjmu">
+            <Codeforces />
+            Codeforces
+          </Socialpill>
+          <Socialpill href="mailto:iamkunal.iitjmu@gmail.com">
+            <Mail />
+            Gmail
+          </Socialpill>
+          <Socialpill href="https://wa.me/919780238531">
+            <Whatsapp />
+            Whatsapp
+          </Socialpill>
+          <Socialpill href="/KunalSharma-Resume-Latest.pdf">
+            <Download />
+            Download CV
+          </Socialpill>
+        </nav>
+      </div>
+    </section>
+
+    <!-- education section -->
+    <section
+      class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+    >
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white undefined"
+      >
+        <Suitcase />
+        Education
+      </h2>
+
+      <ol class="relative mt-16">
+        <li>
+          <div
+            class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+          >
+            <div class="relative pb-12 md:col-span-2">
+              <div class="sticky top-0">
+                <span
+                  class="dark:text-blue-400 text-blue-700 -left-[42px] absolute rounded-full text-5xl"
+                  >•</span
+                >
+                <h3 class="text-xl font-bold dark:text-blue-400 text-blue-700">
+                  Indian Institute of Technology Jammu
+                </h3>
+                <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+                  B.Tech Mathematics And Computing
+                </h4>
+                <time
+                  class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+                  >2023-2027</time
+                >
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+            >
+              Actively pursuing a rigorous interdisciplinary curriculum
+              combining mathematics, computer science, and data science. Engaged
+              in projects like intelligent chatbots, profile analytics tools,
+              and weather applications. Involved in campus activities,
+              volunteering with NSS, and leading technical and cultural events.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div
+            class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+          >
+            <div class="relative pb-12 md:col-span-2">
+              <div class="sticky top-0">
+                <span
+                  class="dark:text-blue-400 text-blue-700 -left-[42px] absolute rounded-full text-5xl"
+                  >•</span
+                >
+                <h3 class="text-xl font-bold dark:text-blue-400 text-blue-700">
+                  Narayana E-Techno School HSN Ludhiana
+                </h3>
+                <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+                  Class 12 (CBSE)
+                </h4>
+                <time
+                  class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+                  >2021-2023</time
+                >
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+            >
+              Graduated with a 94% score, ranking among the top performers in
+              the school. Built strong foundations in mathematics, physics, and
+              computer science, which laid the groundwork for succeeding in
+              national-level engineering entrance exams like JEE.
+            </div>
+          </div>
+        </li>
+
+        <!-- HVM Convent -->
+        <li>
+          <div
+            class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+          >
+            <div class="relative pb-12 md:col-span-2">
+              <div class="sticky top-0">
+                <span
+                  class="dark:text-blue-400 text-blue-700 -left-[42px] absolute rounded-full text-5xl"
+                  >•</span
+                >
+                <h3 class="text-xl font-bold dark:text-blue-400 text-blue-700">
+                  H.V.M. Convent Sr. Sec. School Ludhiana
+                </h3>
+                <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+                  Class 10 (CBSE)
+                </h4>
+                <time
+                  class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+                  >2019–2021</time
+                >
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+            >
+              Secured 95.2% in Class 10 board examinations, becoming the
+              second-highest scorer in school. Developed early interest in
+              technology and problem-solving, participating in science
+              exhibitions and school-level tech events.
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- projects section -->
+    <section
+      class="py-12 px-4 sm:px-6 lg:px-8 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+      id="Projects"
+    >
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Projectsicon />
+        Projects
+      </h2>
+      <div class="flex flex-col gap-y-16">
+        <article class="flex flex-col gap-8 group md:flex-row md:gap-8">
+          <div class="w-full md:w-1/2">
+            <div
+              class="relative flex flex-col items-center gap-8 shadow-xl overflow-hidden rounded-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+            >
+              <img
+                alt="Project1"
+                class="object-cover object-top w-full h-56 sm:h-full transition duration-500 md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src="/rishiknitwear.png"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              Rishi Knitwear Website
+            </h3>
+            <ul class="flex flex-wrap gap-2 mt-2 mb-2">
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2"
+                  ><Nextjs /> Next.js</span
+                >
+              </li>
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-[#003159] text-white py-1 px-2"
+                  ><Tailwindcss /> Tailwind CSS</span
+                >
+              </li>
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              Designed and implemented a responsive, brand-focused website for a
+              Ludhiana-based knitwear firm using Next.js, Tailwind CSS, and
+              TypeScript.
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <a
+                target="_blank"
+                href="https://gitlab.com/iamkunal.iitjmu/rishi-knitwear"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Github />
+                Code
+              </a>
+              <a
+                target="_blank"
+                href="https://rishiknitwear.vercel.app/"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Linkicon />
+                Preview
+              </a>
+            </footer>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-8 group md:flex-row md:gap-8">
+          <div class="w-full md:w-1/2">
+            <div
+              class="relative flex flex-col items-center gap-8 shadow-xl overflow-hidden rounded-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+            >
+              <img
+                alt="Project1"
+                class="object-cover object-top w-full h-56 sm:h-full transition duration-500 md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src="/svaran.png"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              Svaran - IIT Jammu Chatbot
+            </h3>
+            <ul class="flex flex-wrap gap-2 mt-2 mb-2">
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2"
+                  ><Rasa /> Rasa</span
+                >
+              </li>
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-[#003159] text-white py-1 px-2"
+                  ><React /> React</span
+                >
+              </li>
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              Created Svaran, a full-stack chatbot solution for IIT Jammu under
+              the guidance of Prof. Gaurav Varshney and gained 10 cgpa for this
+              project.
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <a
+                target="_blank"
+                href="https://github.com/ks-iitjmu/Svaran_Web"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Github />
+                Code
+              </a>
+              <a
+                target="_blank"
+                href="https://svaran.vercel.app/"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Linkicon />
+                Preview
+              </a>
+            </footer>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-8 group md:flex-row md:gap-8">
+          <div class="w-full md:w-1/2">
+            <div
+              class="relative flex flex-col items-center gap-8 shadow-xl overflow-hidden rounded-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+            >
+              <img
+                alt="Project1"
+                class="object-cover object-top w-full h-56 sm:h-full transition duration-500 md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src="/devcard.png"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              Devcard
+            </h3>
+            <ul class="flex flex-wrap gap-2 mt-2 mb-2">
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2"
+                  ><React /> React</span
+                >
+              </li>
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-[#003159] text-white py-1 px-2"
+                  ><Tailwindcss /> Tailwind CSS</span
+                >
+              </li>
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              Built DevCard using React, Tailwind CSS, and TypeScript web app to
+              visualize GitHub commits and LeetCode stats in real-time.
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <a
+                target="_blank"
+                href="https://github.com/ks-iitjmu/devcard"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Github />
+                Code
+              </a>
+              <a
+                target="_blank"
+                href="https://dev-card-two.vercel.app/"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Linkicon />
+                Preview
+              </a>
+            </footer>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-8 group md:flex-row md:gap-8">
+          <div class="w-full md:w-1/2">
+            <div
+              class="relative flex flex-col items-center gap-8 shadow-xl overflow-hidden rounded-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+            >
+              <img
+                alt="Project1"
+                class="object-cover object-top w-full h-56 sm:h-full transition duration-500 md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src="/klimate.png"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              Klimate
+            </h3>
+            <ul class="flex flex-wrap gap-2 mt-2 mb-2">
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2"
+                  ><React /> React</span
+                >
+              </li>
+              <li>
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-[#003159] text-white py-1 px-2"
+                  ><Tailwindcss /> Tailwind CSS</span
+                >
+              </li>
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              Built Klimate a responsive weather app using React and the
+              OpenWeatherMap API to display real-time weather data by city.
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <a
+                target="_blank"
+                href="https://github.com/ks-iitjmu/klimate"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Github />
+                Code
+              </a>
+              <a
+                target="_blank"
+                href="https://klimate-sand.vercel.app/"
+                class="inline-flex bg-gray-100 text-gray-800 border border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 dark:border-gray-600 hover:bg-gray-800 hover:border-gray-900 hover:text-white rounded-xl focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+              >
+                <Linkicon />
+                Preview
+              </a>
+            </footer>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- about section -->
+    <section
+      id="About"
+      class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+    >
+      <h2
+        class="flex items-center mb-6 text-2xl sm:text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Contactus />
+        About Me
+      </h2>
+      <article
+        class="flex flex-col-reverse md:flex-row items-center justify-center gap-10 text-gray-700 dark:text-gray-300"
+      >
+        <div
+          class="order-2 md:order-1 [&>p]:mb-4 [&>p>strong]:text-blue-700 dark:[&>p>strong]:text-blue-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty"
+        >
+          <p>
+            My name is <strong>Kunal Sharma</strong>. My journey in technology
+            began with a passion for problem-solving and logical thinking, which
+            led me to pursue a degree in <strong
+              >Mathematics and Computing at IIT Jammu.</strong
+            >
+          </p>
+          <p>
+            I have led and contributed to impactful projects like <strong
+              >Svaran</strong
+            >, a chatbot built for IIT Jammu using RASA; <strong>DevCard</strong
+            >, a dynamic GitHub and LeetCode summarizer; <strong>Klimate</strong
+            >, a real-time weather dashboard using React and the OpenWeatherMap
+            API; and <strong>RishiKnitwear</strong>, a modern portfolio website
+            for a textile firm, built using Next.js and Tailwind CSS to showcase
+            their products and brand identity.
+          </p>
+          <p>
+            As a Web Developer and tech enthusiast, I aim to <strong
+              >empower developers through tools that enhance visibility and
+              interaction with technical profiles</strong
+            >. My goal is to make technology accessible and meaningful,
+            especially for students and early-stage developers.
+          </p>
+        </div>
+        <img
+          width="200"
+          height="200"
+          src="/kunal.jpg"
+          alt="Kunal Sharma"
+          class="order-1 md:order-2 object-cover w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 p-1 rotate-3 lg:p-2 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+          style="object-position: 50% 50%"
+        />
+      </article>
+    </section>
+
+    <!-- Certificate section -->
+    <section
+      class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+    >
+      <h2
+        class="flex items-center mb-6 text-2xl sm:text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Contactus />
+        Certifications
+      </h2>
+      <article
+        class="flex flex-col justify-center items-center gap-8 group md:gap-8"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img
+              class="rounded-t-lg"
+              src="/machine_learning.png"
+              alt="Machine Learning Specialization"
+            />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Machine Learning Specialization
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This specialization, offered by Stanford University through
+                Coursera and taught by Andrew Ng, covers core concepts in
+                supervised and unsupervised learning, recommender systems, and
+                reinforcement learning.
+              </p>
+            </div>
+          </div>
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img class="rounded-t-lg" src="/unsupervised.png" alt="" />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Unsupervised Learning, Recommenders, Reinforcement Learning
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This certification course, offered by Stanford University
+                through Coursera and taught by Andrew Ng, provides a
+                foundational understanding of unsupervised learning.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img
+              class="rounded-t-lg"
+              src="/advanced.png"
+              alt="Advanced Learning Algorithms"
+            />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Advanced Learning Algorithms
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This certification course, offered by Stanford University
+                through Coursera and taught by Andrew Ng, builds on foundational
+                ML knowledge with advanced techniques like neural networks, deep
+                learning, and decision trees.
+              </p>
+            </div>
+          </div>
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img class="rounded-t-lg" src="/supervised.png" alt="" />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Supervised Machine Learning: Regression and Classification
+              </h5>
+              <p
+                class="mb-3 font-normal text-wrap text-gray-700 dark:text-gray-400"
+              >
+                This certification course, offered by Stanford University
+                through Coursera and taught by Andrew Ng, provides a
+                foundational understanding of supervised learning techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img class="rounded-t-lg" src="/data_camp1.png" alt="" />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Python Data Associate: Data Camp
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This certification from DataCamp covers core Python programming
+                concepts, including data types, control flow, functions, and
+                data manipulation with libraries like NumPy and pandas.
+              </p>
+            </div>
+          </div>
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img class="rounded-t-lg" src="/matplotlib.png" alt="" />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Data Visualization with Matplotlib: Datacamp
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This course introduces data visualization in Python using
+                Matplotlib, covering plots, customization, and effective data
+                presentation techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img class="rounded-t-lg" src="/pandas.png" alt="" />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Data Manipulation with Pandas: Datacamp
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This course covers essential data manipulation techniques in
+                Python using the pandas library, including filtering, grouping,
+                aggregating, and reshaping data.
+              </p>
+            </div>
+          </div>
+          <div
+            class="max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
+          >
+            <img class="rounded-t-lg" src="/numpy.png" alt="" />
+            <div class="p-5">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Introduction to NumPy: DataCamp
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                This course provides a hands-on introduction to NumPy, covering
+                array creation, indexing, slicing, vectorized operations, and
+                basic statistical methods for efficient numerical computing in
+                Python.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- contact section -->
+    <section
+      class="pb-12 pt-8 px-4 sm:px-6 lg:px-8 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+      id="contact"
+    >
+      <div>
+        <div>
+          <h1
+            class="mt-2 text-2xl flex gap-x-3 font-semibold text-gray-800 md:text-3xl dark:text-white"
+          >
+            <Contactus />
+            Get in touch
+          </h1>
+          <p class="mt-3 text-gray-500 dark:text-gray-400">
+            Have a project in mind or just want to say hello? I'd love to hear
+            from you!
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
+            <div>
+              <span
+                class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  ></path>
+                </svg>
+              </span>
+              <h2
+                class="mt-4 text-base font-medium text-gray-800 dark:text-white"
+              >
+                Email
+              </h2>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Feel free to reach out!
+              </p>
+              <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                iamkunal.iitjmu@gmail.com
+              </p>
+              <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                2023uma0221@iitjammu.ac.in
+              </p>
+            </div>
+            <div>
+              <span
+                class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                  ></path>
+                </svg>
+              </span>
+              <h2
+                class="mt-4 text-base font-medium text-gray-800 dark:text-white"
+              >
+                Phone
+              </h2>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Mon-Fri from 8am to 5pm.
+              </p>
+              <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                +91 9541712485
+              </p>
+              <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                +91 9780238531
+              </p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13689.993726937146!2d75.87968657369171!3d30.928640991843462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a8350240494b1%3A0xfba16063085957e1!2sKaramsar%20Colony%2C%20Gopal%20Nagar%2C%20Subhash%20Nagar%2C%20Ludhiana%2C%20Punjab%20141007!5e0!3m2!1sen!2sin!4v1747941334833!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
