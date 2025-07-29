@@ -29,7 +29,7 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
     <!-- hero section -->
     <section
       id="Home"
-      class="section py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl px-4 sm:px-6 lg:px-8"
+      class="section py-8 md:py-16 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl px-4 sm:px-6 lg:px-8"
     >
       <div class="w-full mx-auto">
         <div class="flex items-center gap-4 mb-6 flex-wrap">
@@ -134,18 +134,63 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
       </div>
     </section>
 
-    <!-- education section -->
+    <!-- GSSoC section -->
     <section
-      class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+      class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+      id="gssoc"
     >
       <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white undefined"
+        class="flex items-center mb-6 text-2xl sm:text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Contactus />
+        GSSoC 2025
+      </h2>
+      <article
+        class="flex flex-col md:flex-row items-center justify-center gap-10 text-gray-700 dark:text-gray-300"
+      >
+        <div
+          class="order-1 md:order-1 [&>p]:mb-4 [&>p>strong]:text-orange-700 dark:[&>p>strong]:text-orange-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty"
+        >
+          <p>
+            I'm excited to be part of <strong>GirlScript Summer of Code (GSSoC) 2025</strong> as a Tech Contributor! 
+            GSSoC is one of the largest open-source programs in India, bringing together developers, students, 
+            and tech enthusiasts to contribute to meaningful projects.
+          </p>
+          <p>
+            As a <strong>GSSoC Tech Contributor</strong>, I'm actively working on various open-source projects, 
+            collaborating with mentors and fellow contributors to build innovative solutions. This program is 
+            helping me enhance my technical skills, learn industry best practices, and contribute to the 
+            open-source community.
+          </p>
+          <p>
+            Through GSSoC, I'm gaining hands-on experience in <strong>collaborative development</strong>, 
+            code review processes, and working with diverse tech stacks. The program emphasizes not just 
+            technical growth but also community building and knowledge sharing.
+          </p>
+        </div>
+        <img
+          width="250"
+          height="250"
+          src="/gssoc.png"
+          alt="GSSoC 2025 Logo"
+          class="order-2 md:order-2 object-cover w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 p-2 rotate-2 lg:p-3 aspect-square rounded-2xl bg-orange-100/20 dark:bg-orange-500/10 ring-1 ring-orange-500/30 dark:ring-orange-400/30"
+          style="object-position: 50% 50%"
+        />
+      </article>
+    </section>
+
+    <!-- education section -->
+    <section
+      class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+    >
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <Suitcase />
         Education
       </h2>
 
-      <ol class="relative mt-16">
+      <ol class="relative">
         <li>
           <div
             class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
@@ -717,7 +762,7 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
 
     <!-- contact section -->
     <section
-      class="pb-12 pt-8 px-4 sm:px-6 lg:px-8 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+      class="pt-8 px-4 sm:px-6 lg:px-8 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
       id="contact"
     >
       <div>
