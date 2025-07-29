@@ -20,15 +20,26 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="dark:bg-[#050505] bg-white">
-		<div
-			class="absolute top-0 bottom-0 z-[-2] w-full bg-gray-50 dark:bg-[#050505]
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
-		<Header />
-		<slot />
-		<Footer />
+	<body class="dark:bg-transparent bg-white min-h-screen">
+		<!-- Galaxy Background -->
+		<div class="galaxy-bg">
+			<div class="deep-space"></div>
+			<div class="stars"></div>
+			<div class="enhanced-stars"></div>
+			<div class="cosmic-dust"></div>
+			<div class="nebula"></div>
+			<div class="shooting-stars">
+				<div class="shooting-star"></div>
+				<div class="shooting-star"></div>
+				<div class="shooting-star"></div>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="relative z-10">
+			<Header />
+			<slot />
+			<Footer />
 		</div>
 	</body>
 </html>
@@ -41,5 +52,27 @@ const { description, title } = Astro.props;
 	body {
 		display: flex;
 		flex-direction: column;
+		min-height: 100vh;
+		overflow-x: hidden;
+	}
+
+	/* Ensure galaxy background is always visible */
+	.galaxy-bg {
+		opacity: 1 !important;
+	}
+
+	/* Enhance visibility in dark mode */
+	.dark .galaxy-bg {
+		opacity: 1 !important;
+	}
+
+	/* Reduce opacity slightly in light mode for readability */
+	:not(.dark) .galaxy-bg {
+		opacity: 0.7 !important;
+	}
+
+	/* Enhance text readability */
+	.dark {
+		color: rgba(255, 255, 255, 0.9);
 	}
 </style>
