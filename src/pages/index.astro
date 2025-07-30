@@ -18,7 +18,7 @@ import Rasa from "../components/icons/Rasa.astro";
 import Contactus from "../components/icons/Contactus.astro";
 import "../styles/global.css";
 import Download from "../components/icons/Download.astro";
-const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 ---
 
 <Layout title="Kunal Sharma" description="Visit my Portfolio Website">
@@ -935,7 +935,7 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
             </p>
             
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6" id="contact-form">
-              <input type="hidden" name="access_key" value={accessKey} />
+              <input type="hidden" name="access_key" value={b91b72fa-3dc8-414e-b888-380304135fdc} />
               <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
               
               <!-- Form status message -->
