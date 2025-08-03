@@ -20,8 +20,7 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="dark:bg-transparent bg-white min-h-screen">
-		<!-- Galaxy Background -->
+	<body class="dark:bg-transparent bg-black min-h-screen">
 		<div class="galaxy-bg">
 			<div class="deep-space"></div>
 			<div class="stars"></div>
@@ -34,8 +33,6 @@ const { description, title } = Astro.props;
 				<div class="shooting-star"></div>
 			</div>
 		</div>
-
-		<!-- Main Content -->
 		<div class="relative z-10">
 			<Header />
 			<slot />
@@ -56,22 +53,18 @@ const { description, title } = Astro.props;
 		overflow-x: hidden;
 	}
 
-	/* Ensure galaxy background is always visible */
 	.galaxy-bg {
 		opacity: 1 !important;
 	}
 
-	/* Enhance visibility in dark mode */
 	.dark .galaxy-bg {
 		opacity: 1 !important;
 	}
 
-	/* Reduce opacity slightly in light mode for readability */
 	:not(.dark) .galaxy-bg {
 		opacity: 0.7 !important;
 	}
 
-	/* Enhance text readability */
 	.dark {
 		color: rgba(255, 255, 255, 0.9);
 	}
