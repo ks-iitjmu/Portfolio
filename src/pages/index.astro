@@ -49,14 +49,12 @@ import Download from "../components/icons/Download.astro";
                   class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"
                 ></span>
                 <div
-                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-300 bg-gray-800 rounded-full cursor-pointer dark:bg-gray-800 dark:text-green-300 backdrop-blur-3xl whitespace-nowrap"
                 >
                   💼 Available for Work
                 </div>
               </span>
             </a>
-            
-            <!-- GSSoC Tech Contributor 2025 Badge -->
             <a
               href="https://gssoc.girlscript.tech/"
               target="_blank"
@@ -70,14 +68,12 @@ import Download from "../components/icons/Download.astro";
                   class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF4500_0%,#FF6B6B_33%,#FF8E53_66%,#FF4500_100%)]"
                 ></span>
                 <div
-                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-orange-800 bg-orange-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-orange-300 backdrop-blur-3xl whitespace-nowrap"
+                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-orange-300 bg-gray-800 rounded-full cursor-pointer dark:bg-gray-800 dark:text-orange-300 backdrop-blur-3xl whitespace-nowrap"
                 >
                   🏆 GSSoC Tech Contributor 2025
                 </div>
               </span>
             </a>
-            
-            <!-- Open Source Connect India 2025 Badge -->
             <a
               href="https://www.osconnect.org/"
               target="_blank"
@@ -91,7 +87,7 @@ import Download from "../components/icons/Download.astro";
                   class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#1E40AF_0%,#3B82F6_33%,#60A5FA_66%,#1E40AF_100%)]"
                 ></span>
                 <div
-                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-blue-300 backdrop-blur-3xl whitespace-nowrap"
+                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-blue-300 bg-gray-800 rounded-full cursor-pointer dark:bg-gray-800 dark:text-blue-300 backdrop-blur-3xl whitespace-nowrap"
                 >
                   🌟 OSCI Contributor 2025
                 </div>
@@ -101,13 +97,13 @@ import Download from "../components/icons/Download.astro";
         </div>
 
         <h1
-          class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+          class="text-4xl font-bold tracking-tight text-white sm:text-5xl dark:text-white"
         >
           Hey, I'm Kunal Sharma
         </h1>
 
         <p
-          class="mt-6 text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-none"
+          class="mt-6 text-xl text-gray-300 dark:text-gray-300 leading-relaxed max-w-none"
         >
           I'm a B.Tech student in Mathematics and Computing at IIT Jammu, with a
           strong interest in web development and machine learning. As a GSSoC (GirlScript Summer of Code) Tech Contributor and Open Source Connect India (OSCI) 2025 Contributor, I'm actively contributing to open-source projects and expanding my expertise in collaborative development. My academic
@@ -119,7 +115,7 @@ import Download from "../components/icons/Download.astro";
           new technologies and apply them to solve real-world problems.
         </p>
 
-        <nav class="flex flex-wrap justify-start gap-4 mt-10">
+        <nav class="flex flex-wrap justify-start gap-4 mt-10 text-white">
           <Socialpill href="https://www.linkedin.com/in/ks-iitjmu/">
             <Linkedin />
             Linkedin
@@ -853,7 +849,7 @@ import Download from "../components/icons/Download.astro";
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
-                  stroke="currentColor"
+                  stroke="#fff"
                   class="w-5 h-5"
                 >
                   <path
@@ -887,7 +883,7 @@ import Download from "../components/icons/Download.astro";
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
-                  stroke="currentColor"
+                  stroke="#fff"
                   class="w-5 h-5"
                 >
                   <path
@@ -1032,6 +1028,7 @@ import Download from "../components/icons/Download.astro";
   </main>
 </Layout>
 
+<!-- Contact Form Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form') as HTMLFormElement;
@@ -1044,7 +1041,6 @@ import Download from "../components/icons/Download.astro";
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Show loading state
         submitBtn.disabled = true;
         btnText.classList.add('hidden');
         btnLoading.classList.remove('hidden');
@@ -1059,30 +1055,24 @@ import Download from "../components/icons/Download.astro";
           const result = await response.json();
           
           if (result.success) {
-            // Show success message
             formMessage.className = 'p-4 rounded-lg bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400 border border-green-200 dark:border-green-800';
             formMessage.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.';
             formMessage.classList.remove('hidden');
             
-            // Reset form
             form.reset();
           } else {
             throw new Error(result.message || 'Something went wrong');
           }
         } catch (error) {
-          // Show error message
           formMessage.className = 'p-4 rounded-lg bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400 border border-red-200 dark:border-red-800';
           formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly via email.';
           formMessage.classList.remove('hidden');
           
           console.error('Form submission error:', error);
         } finally {
-          // Reset button state
           submitBtn.disabled = false;
           btnText.classList.remove('hidden');
           btnLoading.classList.add('hidden');
-          
-          // Hide message after 10 seconds
           setTimeout(() => {
             formMessage.classList.add('hidden');
           }, 10000);
