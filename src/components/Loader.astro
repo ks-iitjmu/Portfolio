@@ -54,10 +54,32 @@
   width: 120px;
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(90deg, #ffffff, #cccccc, #888888, #ffffff);
-  background-size: 300% 100%;
-  animation: colorLine 1.2s linear infinite;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
   margin-top: 1.5rem;
+}
+
+.loader-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), #ffffff, rgba(255, 255, 255, 0.8), transparent);
+  border-radius: 3px;
+  animation: appleLoading 2.5s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes appleLoading {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 120%;
+  }
 }
 
 @keyframes colorLine {
@@ -75,3 +97,68 @@
   <div class="loader-name">Kunal Sharma</div>
   <div class="loader-line"></div>
 </div>
+
+<script>
+  // Track when the page starts loading
+  const loadStartTime = performance.now();
+  const minimumLoadTime = 3000; // 3 seconds minimum
+  
+  let pageLoaded = false;
+  let loaderHidden = false;
+  
+  // Function to hide the loader
+  function hideLoader() {
+    if (loaderHidden) return;
+    loaderHidden = true;
+    
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 0.5s ease-out';
+      
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }
+  }
+  
+  // Function to check if we should hide the loader
+  function checkLoaderStatus() {
+    const currentTime = performance.now();
+    const elapsedTime = currentTime - loadStartTime;
+    
+    if (pageLoaded) {
+      // Page is loaded, check if minimum time has passed
+      if (elapsedTime >= minimumLoadTime) {
+        // Both conditions met: page loaded and minimum time passed
+        hideLoader();
+      } else {
+        // Page loaded but minimum time not reached, wait for remaining time
+        const remainingTime = minimumLoadTime - elapsedTime;
+        setTimeout(hideLoader, remainingTime);
+      }
+    }
+    // If page is not loaded yet, we wait (no action needed)
+  }
+  
+  // Listen for page load completion
+  if (document.readyState === 'complete') {
+    // Page already loaded
+    pageLoaded = true;
+    checkLoaderStatus();
+  } else {
+    // Wait for page to load
+    window.addEventListener('load', () => {
+      pageLoaded = true;
+      checkLoaderStatus();
+    });
+  }
+  
+  // Fallback: Hide loader after maximum time (prevent infinite loading)
+  setTimeout(() => {
+    if (!loaderHidden) {
+      console.warn('Loader timeout: hiding after maximum wait time');
+      hideLoader();
+    }
+  }, 15000); // 15 seconds maximum
+</script>
