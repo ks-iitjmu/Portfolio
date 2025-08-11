@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Loader from "../components/Loader.astro";
 
 interface Props {
 	title: string;
@@ -21,7 +22,16 @@ const { description, title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="dark:bg-transparent bg-black min-h-screen">
-		<div class="galaxy-bg">
+			<Loader />
+				<script>
+					window.addEventListener('load', () => {
+						const loader = document.getElementById('loader');
+						setTimeout(() => {
+							if (loader) loader.style.display = 'none';
+						}, 1500); // 1.5 seconds delay
+					});
+				</script>
+			<div class="galaxy-bg">
 			<div class="deep-space"></div>
 			<div class="stars"></div>
 			<div class="enhanced-stars"></div>
