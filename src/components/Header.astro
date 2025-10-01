@@ -149,5 +149,18 @@
                 toggleMenu();
             }
         });
+
+        document.addEventListener("click", function (event) {
+            const isMenuOpen = !sideMenu.classList.contains("translate-x-full");
+            
+            if (isMenuOpen && event.target instanceof Node) {
+                const isClickInsideMenu = sideMenu.contains(event.target);
+                const isClickOnMenuButton = menuButton.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnMenuButton) {
+                    toggleMenu();
+                }
+            }
+        });
     });
 </script>
