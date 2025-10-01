@@ -18,6 +18,7 @@ import Rasa from "../components/icons/Rasa.astro";
 import Contactus from "../components/icons/Contactus.astro";
 import "../styles/global.css";
 import Download from "../components/icons/Download.astro";
+import LearningCalendar from "../components/LearningCalendar.astro";
 ---
 
 <Layout title="Kunal Sharma" description="Visit my Portfolio Website">
@@ -653,6 +654,27 @@ import Download from "../components/icons/Download.astro";
           class="order-1 md:order-2 object-cover w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 p-1 rotate-3 lg:p-2 aspect-square rounded-2xl bg-yellow-500/10 dark:bg-yellow-500/10 ring-1 ring-white/20 dark:ring-white/20"
           style="object-position: 50% 50%"
         />
+      </article>
+    </section>
+
+    <!-- Learning Calendar section -->
+    <section
+      id="Learning"
+      class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+    >
+      <h2
+        class="flex items-center mb-6 text-2xl sm:text-3xl font-semibold gap-x-3 text-white dark:text-white"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        Daily Learning Streak
+      </h2>
+      <article class="text-gray-300 dark:text-gray-300">
+        <LearningCalendar />
       </article>
     </section>
 
