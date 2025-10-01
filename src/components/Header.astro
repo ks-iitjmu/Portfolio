@@ -1,69 +1,153 @@
-<header class="w-full py-5 px-4 md:px-6">
-    <div class="mx-auto w-full max-w-screen-xl flex flex-wrap justify-center">
-        <div
-            class="inline-flex flex-wrap rounded-md backdrop-blur-sm border border-white/10 dark:border-white/10 border-black/10 shadow-lg dark:bg-black/20 bg-black/10"
+<header class="fixed top-4 right-4 z-50">
+    <button
+        id="menu-button"
+        class="flex items-center justify-center w-12 h-12 rounded-lg backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 transition-all duration-200"
+    >
+        <svg
+            id="hamburger-icon"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
         >
-            <a
-                href="#Home"
-                aria-current="page"
-                class="px-4 py-2 text-sm font-medium text-blue-700 border-transparent rounded-s-lg hover:bg-black/20 dark:hover:bg-black/30 dark:text-white transition-colors"
-            >
-                Home
-            </a>
-            <a
-                href="#leetcode"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                LeetCode
-            </a>
-            <a
-                href="#codeforces"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                Codeforces
-            </a>
-            <a
-                href="#gssoc"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                GSSoC
-            </a>
-            <a
-                href="#osci"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                OSCI
-            </a>
-            <a
-                href="#Projects"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                Projects
-            </a>
-            <a
-                href="#About"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                About
-            </a>
-            <a
-                href="#Learning"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                Learning
-            </a>
-            <a
-                href="#Certifications"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                Certifications
-            </a>
-            <a
-                href="#contact"
-                class="px-4 py-2 text-sm font-medium text-white border-transparent rounded-e-lg hover:bg-white/20 hover:text-blue-700 dark:hover:text-white dark:text-white dark:hover:bg-black/30 transition-colors"
-            >
-                Contact
-            </a>
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg
+            id="close-icon"
+            class="w-6 h-6 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+</header>
+
+<div
+    id="side-menu"
+    class="fixed inset-y-0 right-0 z-40 w-80 max-w-sm transform translate-x-full transition-transform duration-300 ease-in-out"
+>
+    <div class="absolute inset-0 backdrop-blur-md border-l border-white/10">
+        <div class="flex flex-col p-6 space-y-4 h-full">
+            <div class="text-center pb-6 border-b border-white/10">
+                <h2 class="text-xl font-bold text-white">Navigation</h2>
+            </div>
+
+            <nav class="flex flex-col space-y-2">
+                <a
+                    href="#Home"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-blue-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-blue-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    Home
+                </a>
+                <a
+                    href="#leetcode"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-orange-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-orange-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    LeetCode
+                </a>
+                <a
+                    href="#codeforces"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-red-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-red-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    Codeforces
+                </a>
+                <a
+                    href="#Projects"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-purple-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-purple-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    Projects
+                </a>
+                <a
+                    href="#About"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-green-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-green-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    About
+                </a>
+                <a
+                    href="#Learning"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-cyan-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    Learning
+                </a>
+                <a
+                    href="#contact"
+                    class="nav-link flex items-center px-4 py-3 text-white rounded-lg hover:bg-white/10 hover:text-pink-400 transition-colors group"
+                >
+                    <span
+                        class="w-2 h-2 bg-pink-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    ></span>
+                    Contact
+                </a>
+            </nav>
         </div>
     </div>
-</header>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-button");
+        const sideMenu = document.getElementById("side-menu");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const closeIcon = document.getElementById("close-icon");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        if (!menuButton || !sideMenu || !hamburgerIcon || !closeIcon) return;
+
+        function toggleMenu() {
+            if (!sideMenu || !hamburgerIcon || !closeIcon) return;
+
+            const isOpen = !sideMenu.classList.contains("translate-x-full");
+
+            if (isOpen) {
+                sideMenu.classList.add("translate-x-full");
+                hamburgerIcon.classList.remove("hidden");
+                closeIcon.classList.add("hidden");
+            } else {
+                sideMenu.classList.remove("translate-x-full");
+                hamburgerIcon.classList.add("hidden");
+                closeIcon.classList.remove("hidden");
+            }
+        }
+
+        menuButton.addEventListener("click", toggleMenu);
+        navLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+
+        document.addEventListener("keydown", function (event) {
+            if (
+                event.key === "Escape" &&
+                sideMenu &&
+                !sideMenu.classList.contains("translate-x-full")
+            ) {
+                toggleMenu();
+            }
+        });
+    });
+</script>

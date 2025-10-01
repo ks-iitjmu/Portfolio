@@ -2,59 +2,147 @@
 // Learning Calendar Component
 ---
 
-<div class="backdrop-blur-sm border border-white/10 rounded-lg shadow-lg bg-black/20 p-6 transition-all duration-300 hover:shadow-2xl">
+<div
+  class="backdrop-blur-sm border border-white/10 rounded-lg shadow-lg bg-black/20 p-6 transition-all duration-300 hover:shadow-2xl"
+>
   <!-- Calendar Header -->
-  <div class="flex justify-between items-center mb-6 p-4 bg-black/30 rounded-lg border border-white/10">
-    <button id="prevMonth" class="bg-black/30 border-2 border-white/10 rounded-lg p-3 text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <div
+    class="flex justify-between items-center mb-6 p-4 bg-black/30 rounded-lg border border-white/10"
+  >
+    <button
+      id="prevMonth"
+      class="bg-black/30 border-2 border-white/10 rounded-lg p-3 text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         <polyline points="15 18 9 12 15 6"></polyline>
       </svg>
     </button>
-    <h3 id="currentMonth" class="text-xl md:text-2xl font-bold text-white text-center flex-1 tracking-wide"></h3>
-    <button id="nextMonth" class="bg-black/30 border-2 border-white/10 rounded-lg p-3 text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <h3
+      id="currentMonth"
+      class="text-xl md:text-2xl font-bold text-white text-center flex-1 tracking-wide"
+    >
+    </h3>
+    <button
+      id="nextMonth"
+      class="bg-black/30 border-2 border-white/10 rounded-lg p-3 text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
     </button>
   </div>
-  
+
   <!-- Weekdays Header -->
   <div class="grid grid-cols-7 gap-3 mb-4">
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Sun</div>
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Mon</div>
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Tue</div>
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Wed</div>
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Thu</div>
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Fri</div>
-    <div class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5">Sat</div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Sun
+    </div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Mon
+    </div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Tue
+    </div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Wed
+    </div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Thu
+    </div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Fri
+    </div>
+    <div
+      class="text-center font-bold text-gray-300 text-sm py-3 px-2 uppercase tracking-wider bg-black/30 rounded-lg border border-white/5"
+    >
+      Sat
+    </div>
   </div>
-  
+
   <!-- Calendar Days Grid -->
   <div id="calendarDays" class="grid grid-cols-7 gap-3 mb-6"></div>
-  
+
   <!-- Legend -->
-  <div class="flex flex-wrap gap-4 justify-center p-4 bg-black/30 backdrop-blur-sm rounded-lg border border-white/10 mb-4">
+  <div
+    class="flex flex-wrap gap-4 justify-center p-4 bg-black/30 backdrop-blur-sm rounded-lg border border-white/10 mb-4"
+  >
     <div class="flex items-center gap-2">
-      <div class="w-8 h-8 bg-gradient-to-br from-yellow-400/40 to-amber-500/40 border-2 border-yellow-400 rounded-lg shadow-lg shadow-yellow-400/30"></div>
+      <div
+        class="w-8 h-8 bg-gradient-to-br from-yellow-400/40 to-amber-500/40 border-2 border-yellow-400 rounded-lg shadow-lg shadow-yellow-400/30"
+      >
+      </div>
       <span class="text-gray-200 text-sm font-medium">Today</span>
     </div>
     <div class="flex items-center gap-2">
-      <div class="w-8 h-8 bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-2 border-emerald-500 rounded-lg shadow-lg shadow-emerald-500/30">
+      <div
+        class="w-8 h-8 bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-2 border-emerald-500 rounded-lg shadow-lg shadow-emerald-500/30"
+      >
       </div>
       <span class="text-gray-200 text-sm font-medium">Learning Activity</span>
     </div>
     <div class="flex items-center gap-2">
-      <div class="w-8 h-8 bg-black/30 border-2 border-white/10 rounded-lg"></div>
+      <div class="w-8 h-8 bg-black/30 border-2 border-white/10 rounded-lg">
+      </div>
       <span class="text-gray-200 text-sm font-medium">No Activity</span>
     </div>
   </div>
-  
+
   <!-- Selected Day Info -->
-  <div id="selectedDayInfo" class="hidden mt-6 p-6 bg-black/20 backdrop-blur-sm rounded-lg border border-white/10 shadow-lg">
-    <div class="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
+  <div
+    id="selectedDayInfo"
+    class="hidden mt-6 p-6 bg-black/20 backdrop-blur-sm rounded-lg border border-white/10 shadow-lg"
+  >
+    <div
+      class="flex justify-between items-center mb-4 pb-3 border-b border-white/10"
+    >
       <h4 id="selectedDate" class="text-white text-lg font-bold"></h4>
-      <button id="closeInfo" class="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/10 rounded">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button
+        id="closeInfo"
+        class="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/10 rounded"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -66,16 +154,18 @@
 
 <style>
   @keyframes glow {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: 0 0 25px rgba(251, 191, 36, 0.6);
     }
     50% {
       box-shadow: 0 0 40px rgba(251, 191, 36, 0.8);
     }
   }
-  
+
   @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
       transform: scale(1);
     }
@@ -104,15 +194,19 @@
   // Fetch learning data from JSON file
   async function loadLearningData() {
     try {
-      const response = await fetch('/data/learning-data.json');
+      const response = await fetch("/data/learning-data.json");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       learningData = await response.json();
       isDataLoaded = true;
-      console.log('Learning data loaded successfully:', Object.keys(learningData).length, 'entries');
+      console.log(
+        "Learning data loaded successfully:",
+        Object.keys(learningData).length,
+        "entries",
+      );
     } catch (error) {
-      console.error('Error loading learning data:', error);
+      console.error("Error loading learning data:", error);
       // Fallback to empty data if fetch fails
       learningData = {};
       isDataLoaded = true;
@@ -122,59 +216,80 @@
   function renderCalendar() {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
-    
+
     // Update month display
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                       'July', 'August', 'September', 'October', 'November', 'December'];
-    document.getElementById('currentMonth')!.textContent = `${monthNames[month]} ${year}`;
-    
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    document.getElementById("currentMonth")!.textContent =
+      `${monthNames[month]} ${year}`;
+
     // Get first day of month and number of days
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const daysInPrevMonth = new Date(year, month, 0).getDate();
-    
-    const calendarDays = document.getElementById('calendarDays')!;
-    calendarDays.innerHTML = '';
-    
+
+    const calendarDays = document.getElementById("calendarDays")!;
+    calendarDays.innerHTML = "";
+
     const today = new Date(); // Always use actual current date
-    const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
-    
+    const isCurrentMonth =
+      today.getFullYear() === year && today.getMonth() === month;
+
     // Add previous month's days
     for (let i = firstDay - 1; i >= 0; i--) {
       const day = daysInPrevMonth - i;
       const dayEl = createDayElement(day, true);
       calendarDays.appendChild(dayEl);
     }
-    
+
     // Add current month's days
     for (let day = 1; day <= daysInMonth; day++) {
-      const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
       const dayEl = createDayElement(day, false);
-      
+
       const isToday = isCurrentMonth && day === today.getDate();
       const hasActivity = learningData[dateStr];
-      
+
       // Apply styling based on state
       if (isToday && hasActivity) {
         // Today with activity - special gradient
-        dayEl.className = dayEl.className.replace('bg-black/30', '').replace('border-white/20', '');
-        dayEl.className += ' bg-gradient-to-br from-yellow-400/50 to-emerald-500/40 border-3 border-yellow-400 text-yellow-400 font-bold shadow-yellow-400/50 animate-glow';
-        
+        dayEl.className = dayEl.className
+          .replace("bg-black/30", "")
+          .replace("border-white/20", "");
+        dayEl.className +=
+          " bg-gradient-to-br from-yellow-400/50 to-emerald-500/40 border-3 border-yellow-400 text-yellow-400 font-bold shadow-yellow-400/50 animate-glow";
       } else if (isToday) {
         // Today without activity
-        dayEl.className = dayEl.className.replace('bg-black/30', '').replace('border-white/20', '');
-        dayEl.className += ' bg-gradient-to-br from-yellow-400/40 to-amber-500/40 border-3 border-yellow-400 text-yellow-400 font-bold shadow-lg shadow-yellow-400/50 animate-glow';
-        
+        dayEl.className = dayEl.className
+          .replace("bg-black/30", "")
+          .replace("border-white/20", "");
+        dayEl.className +=
+          " bg-gradient-to-br from-yellow-400/40 to-amber-500/40 border-3 border-yellow-400 text-yellow-400 font-bold shadow-lg shadow-yellow-400/50 animate-glow";
       } else if (hasActivity) {
         // Activity but not today
-        dayEl.className = dayEl.className.replace('bg-black/30', '').replace('border-white/20', '');
-        dayEl.className += ' bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-3 border-emerald-500 text-emerald-400 font-bold shadow-lg shadow-emerald-500/40';
+        dayEl.className = dayEl.className
+          .replace("bg-black/30", "")
+          .replace("border-white/20", "");
+        dayEl.className +=
+          " bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-3 border-emerald-500 text-emerald-400 font-bold shadow-lg shadow-emerald-500/40";
       }
-      
-      dayEl.addEventListener('click', () => showDayInfo(dateStr, day));
+
+      dayEl.addEventListener("click", () => showDayInfo(dateStr, day));
       calendarDays.appendChild(dayEl);
     }
-    
+
     // Add next month's days
     const totalCells = calendarDays.children.length;
     const remainingCells = 42 - totalCells; // 6 rows * 7 days
@@ -185,94 +300,136 @@
   }
 
   function createDayElement(day: number, isOtherMonth: boolean) {
-    const dayEl = document.createElement('div');
-    
+    const dayEl = document.createElement("div");
+
     // Base Tailwind classes for all day elements
     const baseClasses = [
-      'aspect-square', 'flex', 'items-center', 'justify-center', 'text-center',
-      'rounded-xl', 'font-semibold', 'cursor-pointer', 'transition-all', 'duration-300',
-      'relative', 'backdrop-blur-sm', 'min-h-12', 'md:min-h-16', 'lg:min-h-20'
+      "aspect-square",
+      "flex",
+      "items-center",
+      "justify-center",
+      "text-center",
+      "rounded-xl",
+      "font-semibold",
+      "cursor-pointer",
+      "transition-all",
+      "duration-300",
+      "relative",
+      "backdrop-blur-sm",
+      "min-h-12",
+      "md:min-h-16",
+      "lg:min-h-20",
     ];
-    
+
     if (isOtherMonth) {
       // Other month days - very subtle
       dayEl.className = [
         ...baseClasses,
-        'bg-black/10', 'border-2', 'border-white/5', 'text-gray-600',
-        'opacity-30', 'cursor-default'
-      ].join(' ');
+        "bg-black/10",
+        "border-2",
+        "border-white/5",
+        "text-gray-600",
+        "opacity-30",
+        "cursor-default",
+      ].join(" ");
     } else {
       // Current month days - normal styling
       dayEl.className = [
         ...baseClasses,
-        'bg-black/30', 'border-2', 'border-white/20', 'text-gray-200',
-        'shadow-lg', 'hover:bg-gray-700/50', 'hover:border-gray-400/50',
-        'hover:-translate-y-1', 'hover:scale-105', 'hover:text-white',
-        'hover:shadow-xl', 'hover:z-10'
-      ].join(' ');
+        "bg-black/30",
+        "border-2",
+        "border-white/20",
+        "text-gray-200",
+        "shadow-lg",
+        "hover:bg-gray-700/50",
+        "hover:border-gray-400/50",
+        "hover:-translate-y-1",
+        "hover:scale-105",
+        "hover:text-white",
+        "hover:shadow-xl",
+        "hover:z-10",
+      ].join(" ");
     }
-    
+
     dayEl.textContent = String(day);
     return dayEl;
   }
 
   function showDayInfo(dateStr: string, day: number) {
     const info = learningData[dateStr];
-    const infoPanel = document.getElementById('selectedDayInfo')!;
-    const dateDisplay = document.getElementById('selectedDate')!;
-    const content = document.getElementById('learningContent')!;
-    
+    const infoPanel = document.getElementById("selectedDayInfo")!;
+    const dateDisplay = document.getElementById("selectedDate")!;
+    const content = document.getElementById("learningContent")!;
+
     selectedDay = dateStr;
-    
+
     const date = new Date(dateStr);
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                       'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
     dateDisplay.textContent = `${monthNames[date.getMonth()]} ${day}, ${date.getFullYear()}`;
-    
+
     if (info && info.tasks && info.tasks.length > 0) {
       // Get category colors
       const getCategoryColor = (category: string) => {
         const colors = {
-          'Development': 'blue',
-          'Frontend': 'emerald',
-          'JavaScript': 'yellow',
-          'React': 'cyan',
-          'TypeScript': 'indigo',
-          'Architecture': 'purple',
-          'DevOps': 'orange',
-          'Algorithms': 'red',
-          'Backend': 'green',
-          'Database': 'pink',
-          'UI/UX': 'rose',
-          'System Design': 'slate',
-          'Next.js': 'violet'
+          Development: "blue",
+          Frontend: "emerald",
+          JavaScript: "yellow",
+          React: "cyan",
+          TypeScript: "indigo",
+          Architecture: "purple",
+          DevOps: "orange",
+          Algorithms: "red",
+          Backend: "green",
+          Database: "pink",
+          "UI/UX": "rose",
+          "System Design": "slate",
+          "Next.js": "violet",
         };
-        return colors[category] || 'gray';
+        return colors[category] || "gray";
       };
 
       const getDifficultyIcon = (difficulty: string) => {
         const icons = {
-          'Beginner': '🟢',
-          'Intermediate': '🟡', 
-          'Advanced': '🔴',
-          'Hard': '🔥'
+          Beginner: "🟢",
+          Intermediate: "🟡",
+          Advanced: "🔴",
+          Hard: "🔥",
         };
-        return icons[difficulty] || '⚪';
+        return icons[difficulty] || "⚪";
       };
 
       content.innerHTML = `
-        ${info.mood ? `
+        ${
+          info.mood
+            ? `
           <div class="mb-4 p-3 bg-black/10 rounded-lg border border-white/5">
             <div class="flex flex-wrap gap-4 text-sm">
               <span class="text-purple-400">😊 ${info.mood}</span>
             </div>
           </div>
-        ` : ''}
+        `
+            : ""
+        }
         
         <div class="space-y-3">
-          ${info.tasks.map(task => `
-            <div class="p-4 pl-8 bg-black/20 backdrop-blur-sm border border-white/10 border-l-4 border-l-${getCategoryColor(task.category || 'Development')}-500 rounded-lg transition-all duration-300 hover:bg-gray-700/30 hover:border-l-${getCategoryColor(task.category || 'Development')}-400 hover:translate-x-2 hover:shadow-lg relative">
-              <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black/80 rounded-full flex items-center justify-center text-lg border-2 border-${getCategoryColor(task.category || 'Development')}-500">
+          ${info.tasks
+            .map(
+              (task) => `
+            <div class="p-4 pl-8 bg-black/20 backdrop-blur-sm border border-white/10 border-l-4 border-l-${getCategoryColor(task.category || "Development")}-500 rounded-lg transition-all duration-300 hover:bg-gray-700/30 hover:border-l-${getCategoryColor(task.category || "Development")}-400 hover:translate-x-2 hover:shadow-lg relative">
+              <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black/80 rounded-full flex items-center justify-center text-lg border-2 border-${getCategoryColor(task.category || "Development")}-500">
                 📚
               </div>
               
@@ -282,24 +439,30 @@
                   <h5 class="text-white font-bold text-lg">${task.title}</h5>
                 </div>
                 <div class="flex items-center gap-2 text-xs">
-                  ${task.difficulty ? `<span>${getDifficultyIcon(task.difficulty)}</span>` : ''}
+                  ${task.difficulty ? `<span>${getDifficultyIcon(task.difficulty)}</span>` : ""}
                 </div>
               </div>
               
               <p class="text-gray-300 text-sm leading-relaxed mb-2">${task.description}</p>
               
-              ${task.category ? `
+              ${
+                task.category
+                  ? `
                 <span class="inline-block px-2 py-1 bg-${getCategoryColor(task.category)}-500/10 border border-${getCategoryColor(task.category)}-500/20 rounded text-${getCategoryColor(task.category)}-400 text-xs font-medium">
                   ${task.category}
                 </span>
-              ` : ''}
+              `
+                  : ""
+              }
             </div>
-          `).join('')}
+          `,
+            )
+            .join("")}
         </div>
         
         <div class="mt-4 flex flex-wrap gap-2">
           <div class="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm border border-emerald-500/30 px-4 py-2 rounded-lg text-emerald-400 font-semibold shadow-lg shadow-emerald-500/20">
-            🔥 ${info.tasks.length} ${info.tasks.length === 1 ? 'task' : 'tasks'} completed
+            🔥 ${info.tasks.length} ${info.tasks.length === 1 ? "task" : "tasks"} completed
           </div>
         </div>
       `;
@@ -311,13 +474,13 @@
         </div>
       `;
     }
-    
-    infoPanel.classList.remove('hidden');
+
+    infoPanel.classList.remove("hidden");
   }
 
   function closeInfo() {
-    const infoPanel = document.getElementById('selectedDayInfo')!;
-    infoPanel.classList.add('hidden');
+    const infoPanel = document.getElementById("selectedDayInfo")!;
+    infoPanel.classList.add("hidden");
     selectedDay = null;
   }
 
@@ -328,21 +491,26 @@
   }
 
   // Initialize calendar when DOM is loaded
-  document.addEventListener('DOMContentLoaded', async () => {
+  document.addEventListener("DOMContentLoaded", async () => {
     // Show loading state
-    const calendarDays = document.getElementById('calendarDays')!;
-    calendarDays.innerHTML = '<div class="col-span-7 text-center py-8 text-gray-400">Loading calendar data...</div>';
-    
+    const calendarDays = document.getElementById("calendarDays")!;
+    calendarDays.innerHTML =
+      '<div class="col-span-7 text-center py-8 text-gray-400">Loading calendar data...</div>';
+
     // Load data first, then render
     await loadLearningData();
-    
+
     // Start with current month and year
     currentDate = new Date();
     renderCalendar();
-    
+
     // Set up event listeners
-    document.getElementById('prevMonth')!.addEventListener('click', () => changeMonth(-1));
-    document.getElementById('nextMonth')!.addEventListener('click', () => changeMonth(1));
-    document.getElementById('closeInfo')!.addEventListener('click', closeInfo);
+    document
+      .getElementById("prevMonth")!
+      .addEventListener("click", () => changeMonth(-1));
+    document
+      .getElementById("nextMonth")!
+      .addEventListener("click", () => changeMonth(1));
+    document.getElementById("closeInfo")!.addEventListener("click", closeInfo);
   });
 </script>
