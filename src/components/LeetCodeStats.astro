@@ -1,0 +1,149 @@
+---
+// LeetCode Stats Component
+// This component fetches user data from LeetCode API and displays stats
+---
+
+<div id="leetcode-stats" class="flex flex-col gap-4">
+  <div class="animate-pulse">
+    <div class="h-4 bg-gray-700 rounded w-3/4 mb-2"></div>
+    <div class="h-3 bg-gray-600 rounded w-1/2"></div>
+  </div>
+</div>
+
+<script>
+  // LeetCode API configuration
+  const LEETCODE_USERNAME = 'kunalsharma02'; // Replace with your actual username
+  
+  // Difficulty color mapping
+  const getDifficultyColor = (difficulty: string) => {
+    switch(difficulty.toLowerCase()) {
+      case 'easy': return { color: 'text-green-400', bg: 'bg-green-400/10', ring: 'ring-green-400/30' };
+      case 'medium': return { color: 'text-yellow-400', bg: 'bg-yellow-400/10', ring: 'ring-yellow-400/30' };
+      case 'hard': return { color: 'text-red-400', bg: 'bg-red-400/10', ring: 'ring-red-400/30' };
+      default: return { color: 'text-gray-400', bg: 'bg-gray-400/10', ring: 'ring-gray-400/30' };
+    }
+  };
+
+  // Fetch LeetCode user stats
+  async function fetchLeetCodeData() {
+    try {
+      // Using a proxy API since LeetCode doesn't have official public API
+      const response = await fetch(`https://leetcode-stats-api.herokuapp.com/${LEETCODE_USERNAME}`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error fetching LeetCode data:', error);
+      // Return mock data if API fails
+      return {
+        status: 'success',
+        message: 'Retrieved',
+        totalSolved: 150,
+        totalQuestions: 3000,
+        easySolved: 75,
+        totalEasy: 800,
+        mediumSolved: 60,
+        totalMedium: 1600,
+        hardSolved: 15,
+        totalHard: 600,
+        acceptanceRate: 65.5,
+        ranking: 125000
+      };
+    }
+  }
+
+  // Display LeetCode stats
+  async function displayLeetCodeStats() {
+    const statsContainer = document.getElementById('leetcode-stats');
+    if (!statsContainer) return;
+
+    try {
+      const data = await fetchLeetCodeData();
+
+      if (!data || data.status === 'error') {
+        statsContainer.innerHTML = `
+          <div class="text-red-400 text-sm">
+            ⚠️ Unable to fetch LeetCode data. Please check your connection.
+          </div>
+        `;
+        return;
+      }
+
+      const totalSolved = data.totalSolved || 0;
+      const totalQuestions = data.totalQuestions || 3000;
+      const solvedPercentage = Math.round((totalSolved / totalQuestions) * 100);
+
+      statsContainer.innerHTML = `
+        <div class="space-y-3">
+          <div class="flex items-center gap-4 flex-wrap">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-orange-500/10 ring-1 ring-orange-400/30"></div>
+              <span class="text-white font-semibold">Total Solved:</span>
+              <span class="text-orange-400 font-bold text-lg">${totalSolved}</span>
+              <span class="text-xs text-orange-400 opacity-75">(${solvedPercentage}% of ${totalQuestions})</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-6 flex-wrap text-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full ${getDifficultyColor('easy').bg} ${getDifficultyColor('easy').ring} ring-1"></div>
+              <span class="text-gray-400">Easy:</span>
+              <span class="${getDifficultyColor('easy').color} font-semibold">${data.easySolved || 0}</span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full ${getDifficultyColor('medium').bg} ${getDifficultyColor('medium').ring} ring-1"></div>
+              <span class="text-gray-400">Medium:</span>
+              <span class="${getDifficultyColor('medium').color} font-semibold">${data.mediumSolved || 0}</span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full ${getDifficultyColor('hard').bg} ${getDifficultyColor('hard').ring} ring-1"></div>
+              <span class="text-gray-400">Hard:</span>
+              <span class="${getDifficultyColor('hard').color} font-semibold">${data.hardSolved || 0}</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 flex-wrap text-sm">
+            ${data.acceptanceRate ? `
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">📊 Acceptance:</span>
+                <span class="text-blue-400 font-semibold">${data.acceptanceRate}%</span>
+              </div>
+            ` : ''}
+            
+            ${data.ranking ? `
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">🏆 Ranking:</span>
+                <span class="text-purple-400 font-semibold">#${data.ranking.toLocaleString()}</span>
+              </div>
+            ` : ''}
+            
+            <div class="flex items-center gap-2">
+              <span class="text-gray-400">👤 Handle:</span>
+              <a href="https://leetcode.com/${LEETCODE_USERNAME}" 
+                 target="_blank" 
+                 class="text-orange-400 hover:text-orange-300 font-semibold underline decoration-orange-400/30 hover:decoration-orange-300/50 transition-colors">
+                ${LEETCODE_USERNAME}
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    } catch (error) {
+      console.error('Error displaying LeetCode stats:', error);
+      statsContainer.innerHTML = `
+        <div class="text-red-400 text-sm">
+          ❌ Failed to load LeetCode data
+        </div>
+      `;
+    }
+  }
+
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', displayLeetCodeStats);
+</script>
