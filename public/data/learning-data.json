@@ -5,20 +5,16 @@
         "title": "Learning Calendar Development",
         "description": "Built interactive calendar component for portfolio using Astro and Tailwind CSS",
         "category": "Development",
-        "difficulty": "Advanced",
-        "timeSpent": "4 hours"
+        "difficulty": "Advanced"
       },
       {
         "title": "Tailwind CSS Integration",
         "description": "Migrated from custom CSS to Tailwind utility classes for better maintainability",
         "category": "Frontend",
-        "difficulty": "Intermediate",
-        "timeSpent": "2 hours"
+        "difficulty": "Intermediate"
       }
     ],
-    "totalHours": 6,
-    "mood": "Productive",
-    "notes": "Great progress on the portfolio calendar feature!"
+    "mood": "Productive"
   },
   "2025-10-02": {
     "tasks": [
@@ -26,13 +22,10 @@
         "title": "JavaScript Date Handling",
         "description": "Implemented automatic date detection and calendar updates with proper timezone handling",
         "category": "JavaScript",
-        "difficulty": "Intermediate",
-        "timeSpent": "3 hours"
+        "difficulty": "Intermediate"
       }
     ],
-    "totalHours": 3,
-    "mood": "Focused",
-    "notes": "Deep dive into JavaScript Date API complexities"
+    "mood": "Focused"
   },
   "2025-10-03": {
     "tasks": [
@@ -40,20 +33,16 @@
         "title": "Responsive Design",
         "description": "Made calendar fully responsive across all devices using Tailwind's responsive utilities",
         "category": "Frontend",
-        "difficulty": "Intermediate",
-        "timeSpent": "2.5 hours"
+        "difficulty": "Intermediate"
       },
       {
         "title": "Animation Effects",
         "description": "Added smooth transitions, hover effects, and pulse animations for better UX",
         "category": "UI/UX",
-        "difficulty": "Intermediate",
-        "timeSpent": "1.5 hours"
+        "difficulty": "Intermediate"
       }
     ],
-    "totalHours": 4,
-    "mood": "Creative",
-    "notes": "Love working on animations and micro-interactions!"
+    "mood": "Creative"
   },
   "2025-10-05": {
     "tasks": [
@@ -61,13 +50,10 @@
         "title": "Component Architecture",
         "description": "Structured reusable Astro components following best practices for maintainability",
         "category": "Architecture",
-        "difficulty": "Advanced",
-        "timeSpent": "3.5 hours"
+        "difficulty": "Advanced"
       }
     ],
-    "totalHours": 3.5,
-    "mood": "Thoughtful",
-    "notes": "Planning and architecture is crucial for scalable code"
+    "mood": "Thoughtful"
   },
   "2025-10-07": {
     "tasks": [
@@ -75,20 +61,16 @@
         "title": "Git Workflow Mastery",
         "description": "Advanced Git branching strategies, rebasing, and collaborative development techniques",
         "category": "DevOps",
-        "difficulty": "Advanced",
-        "timeSpent": "2 hours"
+        "difficulty": "Advanced"
       },
       {
         "title": "Code Review Best Practices",
         "description": "Learned effective code review techniques and documentation standards",
         "category": "Best Practices",
-        "difficulty": "Intermediate",
-        "timeSpent": "1 hour"
+        "difficulty": "Intermediate"
       }
     ],
-    "totalHours": 3,
-    "mood": "Collaborative",
-    "notes": "Teamwork and communication skills are as important as coding"
+    "mood": "Collaborative"
   },
   "2025-10-10": {
     "tasks": [
@@ -96,13 +78,10 @@
         "title": "Dynamic Programming Deep Dive",
         "description": "Solved complex LeetCode problems focusing on optimization and space complexity",
         "category": "Algorithms",
-        "difficulty": "Hard",
-        "timeSpent": "4 hours"
+        "difficulty": "Hard"
       }
     ],
-    "totalHours": 4,
-    "mood": "Challenged",
-    "notes": "Algorithms are tough but rewarding when you crack them!"
+    "mood": "Challenged"
   },
   "2025-10-12": {
     "tasks": [
@@ -110,13 +89,10 @@
         "title": "React Hook Patterns",
         "description": "Explored advanced React hooks like useCallback, useMemo, and custom hook patterns",
         "category": "React",
-        "difficulty": "Advanced",
-        "timeSpent": "3 hours"
+        "difficulty": "Advanced"
       }
     ],
-    "totalHours": 3,
-    "mood": "Insightful",
-    "notes": "React hooks unlock so much potential for clean code"
+    "mood": "Insightful"
   },
   "2025-10-15": {
     "tasks": [
@@ -124,20 +100,16 @@
         "title": "TypeScript Advanced Types",
         "description": "Mastered utility types, conditional types, and mapped types for better type safety",
         "category": "TypeScript",
-        "difficulty": "Advanced",
-        "timeSpent": "2.5 hours"
+        "difficulty": "Advanced"
       },
       {
         "title": "API Design Principles",
         "description": "Studied RESTful API design patterns and GraphQL query optimization",
         "category": "Backend",
-        "difficulty": "Intermediate",
-        "timeSpent": "2 hours"
+        "difficulty": "Intermediate"
       }
     ],
-    "totalHours": 4.5,
-    "mood": "Analytical",
-    "notes": "Type safety and API design go hand in hand"
+    "mood": "Analytical"
   },
   "2025-09-30": {
     "tasks": [
@@ -145,20 +117,16 @@
         "title": "System Design Fundamentals",
         "description": "Load balancing, caching strategies, and database scaling techniques",
         "category": "System Design",
-        "difficulty": "Advanced",
-        "timeSpent": "3 hours"
+        "difficulty": "Advanced"
       },
       {
         "title": "TypeScript Generics",
         "description": "Advanced generic types and constraints for type-safe utility functions",
         "category": "TypeScript",
-        "difficulty": "Advanced",
-        "timeSpent": "2 hours"
+        "difficulty": "Advanced"
       }
     ],
-    "totalHours": 5,
-    "mood": "Ambitious",
-    "notes": "System design thinking helps in building scalable solutions"
+    "mood": "Ambitious"
   },
   "2025-09-29": {
     "tasks": [
@@ -166,13 +134,10 @@
         "title": "Next.js App Router",
         "description": "Server components, streaming, and parallel routes in Next.js 13+",
         "category": "Next.js",
-        "difficulty": "Advanced",
-        "timeSpent": "4 hours"
+        "difficulty": "Advanced"
       }
     ],
-    "totalHours": 4,
-    "mood": "Excited",
-    "notes": "Next.js keeps evolving with amazing features!"
+    "mood": "Excited"
   },
   "2025-09-28": {
     "tasks": [
@@ -180,12 +145,9 @@
         "title": "Database Optimization",
         "description": "Query optimization, indexing strategies, and performance monitoring",
         "category": "Database",
-        "difficulty": "Advanced",
-        "timeSpent": "3.5 hours"
+        "difficulty": "Advanced"
       }
     ],
-    "totalHours": 3.5,
-    "mood": "Methodical",
-    "notes": "Performance optimization requires patience and systematic thinking"
+    "mood": "Methodical"
   }
 }

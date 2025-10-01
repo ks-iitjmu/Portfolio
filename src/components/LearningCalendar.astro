@@ -39,8 +39,7 @@
       <span class="text-gray-200 text-sm font-medium">Today</span>
     </div>
     <div class="flex items-center gap-2">
-      <div class="w-8 h-8 bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-2 border-emerald-500 rounded-lg shadow-lg shadow-emerald-500/30 relative">
-        <div class="absolute inset-0 flex items-center justify-center text-emerald-500 text-xs font-black">✓</div>
+      <div class="w-8 h-8 bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-2 border-emerald-500 rounded-lg shadow-lg shadow-emerald-500/30">
       </div>
       <span class="text-gray-200 text-sm font-medium">Learning Activity</span>
     </div>
@@ -161,17 +160,6 @@
         dayEl.className = dayEl.className.replace('bg-black/30', '').replace('border-white/20', '');
         dayEl.className += ' bg-gradient-to-br from-yellow-400/50 to-emerald-500/40 border-3 border-yellow-400 text-yellow-400 font-bold shadow-yellow-400/50 animate-glow';
         
-        // Add checkmark
-        const checkmark = document.createElement('div');
-        checkmark.className = 'absolute top-1 right-1 w-5 h-5 bg-black/50 rounded-full flex items-center justify-center text-yellow-400 text-xs font-black border-2 border-yellow-400';
-        checkmark.textContent = '✓';
-        dayEl.appendChild(checkmark);
-        
-        // Add pulse dot
-        const dot = document.createElement('div');
-        dot.className = 'absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-pulse-dot shadow-lg shadow-yellow-400/70';
-        dayEl.appendChild(dot);
-        
       } else if (isToday) {
         // Today without activity
         dayEl.className = dayEl.className.replace('bg-black/30', '').replace('border-white/20', '');
@@ -181,17 +169,6 @@
         // Activity but not today
         dayEl.className = dayEl.className.replace('bg-black/30', '').replace('border-white/20', '');
         dayEl.className += ' bg-gradient-to-br from-emerald-500/40 to-green-600/40 border-3 border-emerald-500 text-emerald-400 font-bold shadow-lg shadow-emerald-500/40';
-        
-        // Add checkmark
-        const checkmark = document.createElement('div');
-        checkmark.className = 'absolute top-1 right-1 w-5 h-5 bg-black/50 rounded-full flex items-center justify-center text-emerald-400 text-xs font-black border-2 border-emerald-500';
-        checkmark.textContent = '✓';
-        dayEl.appendChild(checkmark);
-        
-        // Add pulse dot
-        const dot = document.createElement('div');
-        dot.className = 'absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-emerald-500 rounded-full animate-pulse-dot shadow-lg shadow-emerald-500/70';
-        dayEl.appendChild(dot);
       }
       
       dayEl.addEventListener('click', () => showDayInfo(dateStr, day));
@@ -284,19 +261,17 @@
       };
 
       content.innerHTML = `
-        ${info.mood || info.totalHours ? `
+        ${info.mood ? `
           <div class="mb-4 p-3 bg-black/10 rounded-lg border border-white/5">
             <div class="flex flex-wrap gap-4 text-sm">
-              ${info.totalHours ? `<span class="text-blue-400">⏱️ ${info.totalHours} hours</span>` : ''}
-              ${info.mood ? `<span class="text-purple-400">😊 ${info.mood}</span>` : ''}
+              <span class="text-purple-400">😊 ${info.mood}</span>
             </div>
-            ${info.notes ? `<p class="text-gray-400 text-xs mt-2 italic">"${info.notes}"</p>` : ''}
           </div>
         ` : ''}
         
         <div class="space-y-3">
           ${info.tasks.map(task => `
-            <div class="p-4 bg-black/20 backdrop-blur-sm border border-white/10 border-l-4 border-l-${getCategoryColor(task.category || 'Development')}-500 rounded-lg transition-all duration-300 hover:bg-gray-700/30 hover:border-l-${getCategoryColor(task.category || 'Development')}-400 hover:translate-x-2 hover:shadow-lg relative">
+            <div class="p-4 pl-8 bg-black/20 backdrop-blur-sm border border-white/10 border-l-4 border-l-${getCategoryColor(task.category || 'Development')}-500 rounded-lg transition-all duration-300 hover:bg-gray-700/30 hover:border-l-${getCategoryColor(task.category || 'Development')}-400 hover:translate-x-2 hover:shadow-lg relative">
               <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black/80 rounded-full flex items-center justify-center text-lg border-2 border-${getCategoryColor(task.category || 'Development')}-500">
                 📚
               </div>
@@ -308,7 +283,6 @@
                 </div>
                 <div class="flex items-center gap-2 text-xs">
                   ${task.difficulty ? `<span>${getDifficultyIcon(task.difficulty)}</span>` : ''}
-                  ${task.timeSpent ? `<span class="text-gray-400">${task.timeSpent}</span>` : ''}
                 </div>
               </div>
               
@@ -327,11 +301,6 @@
           <div class="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm border border-emerald-500/30 px-4 py-2 rounded-lg text-emerald-400 font-semibold shadow-lg shadow-emerald-500/20">
             🔥 ${info.tasks.length} ${info.tasks.length === 1 ? 'task' : 'tasks'} completed
           </div>
-          ${info.totalHours ? `
-            <div class="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 px-4 py-2 rounded-lg text-blue-400 font-semibold">
-              ⏰ ${info.totalHours}h total
-            </div>
-          ` : ''}
         </div>
       `;
     } else {
