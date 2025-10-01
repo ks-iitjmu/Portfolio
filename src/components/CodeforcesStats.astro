@@ -1,21 +1,11 @@
----
-// Codeforces Rating Component
-// This component fetches user data from Codeforces API and displays rating info
----
-
 <div id="codeforces-stats" class="flex flex-col gap-4">
-  <div class="animate-pulse">
-    <div class="h-4 bg-gray-700 rounded w-3/4 mb-2"></div>
-    <div class="h-3 bg-gray-600 rounded w-1/2"></div>
-  </div>
+  <div class="text-gray-400 text-sm">Loading...</div>
 </div>
 
 <script>
-  // Codeforces API configuration
   const CODEFORCES_API_BASE = 'https://codeforces.com/api';
   const CODEFORCES_HANDLE = 'ks-iitjmu';
   
-  // Rating color mapping based on Codeforces rating system
   const getRatingColor = (rating: number) => {
     if (rating >= 3000) return { color: 'text-red-500', bg: 'bg-red-500/10', ring: 'ring-red-400/30', name: 'Legendary Grandmaster' };
     if (rating >= 2600) return { color: 'text-red-400', bg: 'bg-red-400/10', ring: 'ring-red-300/30', name: 'International Grandmaster' };
@@ -29,7 +19,6 @@
     return { color: 'text-gray-400', bg: 'bg-gray-400/10', ring: 'ring-gray-300/30', name: 'Newbie' };
   };
 
-  // Fetch Codeforces user info
   async function fetchCodeforcesData() {
     try {
       const response = await fetch(`${CODEFORCES_API_BASE}/user.info?handles=${CODEFORCES_HANDLE}`);
@@ -51,7 +40,6 @@
     }
   }
 
-  // Fetch user's contest history for additional stats
   async function fetchContestStats() {
     try {
       const response = await fetch(`${CODEFORCES_API_BASE}/user.rating?handle=${CODEFORCES_HANDLE}`);
@@ -73,13 +61,11 @@
     }
   }
 
-  // Display Codeforces stats
   async function displayCodeforcesStats() {
     const statsContainer = document.getElementById('codeforces-stats');
     if (!statsContainer) return;
 
     try {
-      // Fetch user data and contest history in parallel
       const [userData, contestHistory] = await Promise.all([
         fetchCodeforcesData(),
         fetchContestStats()
@@ -99,7 +85,6 @@
       const ratingInfo = getRatingColor(rating);
       const maxRatingInfo = getRatingColor(maxRating);
       
-      // Calculate contest participation
       const contestCount = contestHistory.length;
       const bestRank = contestHistory.length > 0 ? Math.min(...contestHistory.map(c => c.rank)) : null;
 
@@ -166,6 +151,5 @@
     }
   }
 
-  // Initialize when DOM is loaded
   document.addEventListener('DOMContentLoaded', displayCodeforcesStats);
 </script>
