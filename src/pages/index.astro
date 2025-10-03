@@ -33,9 +33,9 @@ import LeetCodeStats from "../components/LeetCodeStats.astro";
       <div class="w-full mx-auto">
         <div class="flex items-center gap-4 mb-6 flex-wrap">
           <img
-            src="/kunal.jpg"
+            src="/kunal.png"
             alt="Kunal Sharma"
-            class="rounded-full shadow-lg w-16 h-16"
+            class="rounded-full shadow-lg w-32 h-32"
           />
           <div class="flex flex-wrap gap-3">
             <a
@@ -54,6 +54,25 @@ import LeetCodeStats from "../components/LeetCodeStats.astro";
                   class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-300 bg-gray-800 rounded-full cursor-pointer dark:bg-gray-800 dark:text-green-300 backdrop-blur-3xl whitespace-nowrap"
                 >
                   💼 Available for Work
+                </div>
+              </span>
+            </a>
+            <a
+              href="https://hacktoberfest.com/"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center transition hover:scale-105"
+            >
+              <span
+                class="relative inline-flex overflow-hidden rounded-full p-[1px]"
+                >
+                <span
+                class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e9c6ff_0%,#c6a3e6_33%,#a580c0_66%,#e9c6ff_100%)]"
+                ></span>
+                <div
+                class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-[#e9c6ff] bg-[#3a2350] rounded-full cursor-pointer dark:bg-[#3a2350] dark:text-[#e9c6ff] backdrop-blur-3xl whitespace-nowrap"
+                >
+                🌐 Hacktoberfest Contributor 2025
                 </div>
               </span>
             </a>
@@ -209,7 +228,7 @@ import LeetCodeStats from "../components/LeetCodeStats.astro";
           height="250"
           src="/LeetCode.png"
           alt="LeetCode Logo"
-          class="order-2 md:order-2 object-contain w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 p-4 rotate-1 lg:p-6 aspect-square rounded-2xl bg-orange-500/10 dark:bg-orange-500/10 ring-1 ring-orange-400/30 dark:ring-orange-400/30"
+          class="order-2 md:order-2 object-contain w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 p-4 rotate-2 lg:p-6 aspect-square rounded-2xl bg-orange-500/10 dark:bg-orange-500/10 ring-1 ring-orange-400/30 dark:ring-orange-400/30"
           style="object-position: center center"
         />
       </article>
@@ -271,6 +290,57 @@ import LeetCodeStats from "../components/LeetCodeStats.astro";
           src="/codeforces.png"
           alt="Codeforces Logo"
           class="order-2 md:order-2 object-cover w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 p-2 -rotate-3 lg:p-3 aspect-square rounded-2xl bg-yellow-500/10 dark:bg-yellow-500/10 ring-1 ring-yellow-400/30 dark:ring-yellow-400/30"
+          style="object-position: 50% 50%"
+        />
+      </article>
+    </section>
+
+    <!-- Hacktoberfest section -->
+    <section
+      class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+      id="hacktoberfest"
+    >
+      <h2
+        class="flex items-center mb-6 text-2xl sm:text-3xl font-semibold gap-x-3 text-white dark:text-white"
+      >
+        <Contactus />
+        Hacktoberfest 2025
+      </h2>
+      <article
+        class="flex flex-col md:flex-row items-center justify-center gap-10 text-gray-300 dark:text-gray-300"
+      >
+        <div
+          class="order-1 md:order-1 [&>p]:mb-4 [&>p>strong]:text-sky-400 dark:[&>p>strong]:text-sky-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty"
+        >
+          <p>
+            I'm excited to be part of <strong>Hacktoberfest 2025</strong> as a Tech
+            Contributor! Hacktoberfest is a global celebration of open-source software
+            that brings together developers worldwide to contribute to meaningful
+            projects and foster collaborative development.
+          </p>
+          <p>
+            As a <strong>Hacktoberfest Tech Contributor</strong>, I'm actively
+            working on diverse open-source repositories, submitting quality pull
+            requests, and collaborating with maintainers and fellow
+            contributors. This annual event provides an excellent opportunity to
+            enhance technical skills while giving back to the open-source
+            community.
+          </p>
+          <p>
+            Through Hacktoberfest, I'm learning about <strong
+              >collaborative software development</strong
+            >, best practices in version control, and contributing to projects
+            that make a real impact. The program emphasizes quality
+            contributions and community building, helping developers grow their
+            skills and network.
+          </p>
+        </div>
+        <img
+          width="250"
+          height="250"
+          src="/hack.webp"
+          alt="Hacktoberfest 2025 Logo"
+          class="order-2 md:order-2 object-cover w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 p-2 rotate-2 lg:p-3 aspect-square rounded-2xl bg-sky-500/10 dark:bg-sky-500/10 ring-1 ring-sky-400/30 dark:ring-sky-400/30"
           style="object-position: 50% 50%"
         />
       </article>
@@ -380,6 +450,7 @@ import LeetCodeStats from "../components/LeetCodeStats.astro";
     <!-- education section -->
     <section
       class="w-full px-4 py-12 mx-auto scroll-m-20 container sm:px-6 md:px-8 lg:max-w-4xl md:max-w-2xl"
+      id="Education"
     >
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white"
@@ -773,7 +844,7 @@ import LeetCodeStats from "../components/LeetCodeStats.astro";
         <img
           width="200"
           height="200"
-          src="/kunal.jpg"
+          src="/kunal.png"
           alt="Kunal Sharma"
           class="order-1 md:order-2 object-cover w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 p-1 rotate-3 lg:p-2 aspect-square rounded-2xl bg-yellow-500/10 dark:bg-yellow-500/10 ring-1 ring-white/20 dark:ring-white/20"
           style="object-position: 50% 50%"
